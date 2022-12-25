@@ -2181,6 +2181,9 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <sheets>
 <sheet>
 <plain>
+<text x="2.54" y="0" size="1.778" layer="91">VOLTAGE REGULATOR</text>
+<text x="175.26" y="0" size="1.778" layer="91">MICROCONTROLLER</text>
+<text x="441.96" y="-63.5" size="1.778" layer="91">STEPPER MOTOR CONTROLLER</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="142.24" y="63.5" smashed="yes">
@@ -2214,42 +2217,42 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <instance part="SUPPLY2" gate="GND" x="83.82" y="63.5" smashed="yes" rot="R180">
 <attribute name="VALUE" x="85.725" y="66.675" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="IC2" gate="A1" x="17.78" y="55.88" smashed="yes">
-<attribute name="NAME" x="10.16" y="64.135" size="1.778" layer="95"/>
-<attribute name="VALUE" x="10.16" y="61.595" size="1.778" layer="96"/>
+<instance part="IC2" gate="A1" x="-22.86" y="55.88" smashed="yes">
+<attribute name="NAME" x="-30.48" y="64.135" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-30.48" y="61.595" size="1.778" layer="96"/>
 </instance>
-<instance part="R3" gate="G$1" x="45.72" y="50.8" smashed="yes" rot="R90">
-<attribute name="NAME" x="44.2214" y="46.99" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="49.022" y="46.99" size="1.778" layer="96" rot="R90"/>
+<instance part="R3" gate="G$1" x="5.08" y="50.8" smashed="yes" rot="R90">
+<attribute name="NAME" x="3.5814" y="46.99" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="8.382" y="46.99" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R4" gate="G$1" x="45.72" y="30.48" smashed="yes" rot="R90">
-<attribute name="NAME" x="44.2214" y="26.67" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="49.022" y="26.67" size="1.778" layer="96" rot="R90"/>
+<instance part="R4" gate="G$1" x="5.08" y="30.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="3.5814" y="26.67" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="8.382" y="26.67" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C4" gate="G$1" x="33.02" y="50.8" smashed="yes" rot="R180">
-<attribute name="NAME" x="31.496" y="50.419" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="31.496" y="55.499" size="1.778" layer="96" rot="R180"/>
+<instance part="C4" gate="G$1" x="-7.62" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="-9.144" y="50.419" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-9.144" y="55.499" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C5" gate="G$1" x="2.54" y="50.8" smashed="yes" rot="R180">
-<attribute name="NAME" x="1.016" y="50.419" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="1.016" y="55.499" size="1.778" layer="96" rot="R180"/>
+<instance part="C5" gate="G$1" x="-38.1" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="-39.624" y="50.419" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-39.624" y="55.499" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY3" gate="GND" x="33.02" y="43.18" smashed="yes">
-<attribute name="VALUE" x="31.115" y="40.005" size="1.778" layer="96"/>
+<instance part="SUPPLY3" gate="GND" x="-7.62" y="43.18" smashed="yes">
+<attribute name="VALUE" x="-9.525" y="40.005" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY5" gate="GND" x="2.54" y="43.18" smashed="yes">
-<attribute name="VALUE" x="0.635" y="40.005" size="1.778" layer="96"/>
+<instance part="SUPPLY5" gate="GND" x="-38.1" y="43.18" smashed="yes">
+<attribute name="VALUE" x="-40.005" y="40.005" size="1.778" layer="96"/>
 </instance>
-<instance part="VDD" gate="G$1" x="-7.62" y="58.42" smashed="yes" rot="R180">
-<attribute name="NAME" x="-5.08" y="57.15" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-5.08" y="60.96" size="1.778" layer="96" rot="R180"/>
+<instance part="VDD" gate="G$1" x="-48.26" y="58.42" smashed="yes" rot="R180">
+<attribute name="NAME" x="-45.72" y="57.15" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-45.72" y="60.96" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SUPPLY1" gate="GND" x="58.42" y="15.24" smashed="yes">
-<attribute name="VALUE" x="56.515" y="12.065" size="1.778" layer="96"/>
+<instance part="SUPPLY1" gate="GND" x="17.78" y="15.24" smashed="yes">
+<attribute name="VALUE" x="15.875" y="12.065" size="1.778" layer="96"/>
 </instance>
-<instance part="GND" gate="G$1" x="-7.62" y="20.32" smashed="yes" rot="R180">
-<attribute name="NAME" x="-5.08" y="19.05" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-5.08" y="22.86" size="1.778" layer="96" rot="R180"/>
+<instance part="GND" gate="G$1" x="-48.26" y="20.32" smashed="yes" rot="R180">
+<attribute name="NAME" x="-45.72" y="19.05" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-45.72" y="22.86" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="Q1" gate="G$1" x="71.12" y="78.74" smashed="yes" rot="R270">
 <attribute name="NAME" x="74.93" y="83.82" size="1.778" layer="95" rot="R270"/>
@@ -2266,9 +2269,9 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <instance part="SUPPLY4" gate="GND" x="50.8" y="78.74" smashed="yes" rot="R270">
 <attribute name="VALUE" x="47.625" y="80.645" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="U1" gate="G$1" x="246.38" y="35.56" smashed="yes">
-<attribute name="NAME" x="228.6" y="54.34" size="2.0828" layer="95" ratio="10" rot="SR0"/>
-<attribute name="VALUE" x="228.6" y="13.78" size="2.0828" layer="96" ratio="10" rot="SR0"/>
+<instance part="U1" gate="G$1" x="259.08" y="35.56" smashed="yes">
+<attribute name="NAME" x="241.3" y="54.34" size="2.0828" layer="95" ratio="10" rot="SR0"/>
+<attribute name="VALUE" x="241.3" y="13.78" size="2.0828" layer="96" ratio="10" rot="SR0"/>
 </instance>
 <instance part="IC3" gate="G$1" x="314.96" y="104.14" smashed="yes">
 <attribute name="NAME" x="341.63" y="111.76" size="1.778" layer="95" align="center-left"/>
@@ -2356,27 +2359,27 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <segment>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <pinref part="C4" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="45.72" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="45.72" x2="-7.62" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="45.72" x2="2.54" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="45.72" x2="-38.1" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="30.48" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="20.32" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="20.32" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="20.32" x2="-2.54" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="20.32" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
-<junction x="45.72" y="20.32"/>
+<wire x1="17.78" y1="20.32" x2="5.08" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="20.32" x2="-43.18" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="20.32" x2="5.08" y2="25.4" width="0.1524" layer="91"/>
+<junction x="5.08" y="20.32"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<wire x1="58.42" y1="17.78" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
-<junction x="58.42" y="20.32"/>
+<wire x1="17.78" y1="17.78" x2="17.78" y2="20.32" width="0.1524" layer="91"/>
+<junction x="17.78" y="20.32"/>
 <pinref part="GND" gate="G$1" pin="1"/>
-<junction x="-2.54" y="20.32"/>
+<junction x="-43.18" y="20.32"/>
 </segment>
 <segment>
 <pinref part="SUPPLY4" gate="GND" pin="GND"/>
@@ -2420,16 +2423,16 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="269.24" y1="22.86" x2="271.78" y2="22.86" width="0.1524" layer="91"/>
-<label x="271.78" y="22.86" size="1.778" layer="95" xref="yes"/>
+<wire x1="281.94" y1="22.86" x2="284.48" y2="22.86" width="0.1524" layer="91"/>
+<label x="284.48" y="22.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="E1"/>
-<wire x1="223.52" y1="40.64" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="40.64" x2="218.44" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="40.64" x2="233.68" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="40.64" x2="233.68" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="LE"/>
-<wire x1="218.44" y1="38.1" x2="223.52" y2="38.1" width="0.1524" layer="91"/>
-<label x="218.44" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="38.1" x2="236.22" y2="38.1" width="0.1524" layer="91"/>
+<label x="233.68" y="40.64" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC9" gate="G$1" pin="GND"/>
@@ -2486,17 +2489,17 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <segment>
 <pinref part="IC2" gate="A1" pin="VO"/>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="58.42" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="58.42" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="58.42" x2="45.72" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="58.42" x2="-7.62" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="58.42" x2="5.08" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="58.42" x2="5.08" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="55.88" x2="33.02" y2="58.42" width="0.1524" layer="91"/>
-<junction x="33.02" y="58.42"/>
-<label x="45.72" y="60.96" size="1.778" layer="95"/>
+<wire x1="-7.62" y1="55.88" x2="-7.62" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-7.62" y="58.42"/>
+<label x="5.08" y="60.96" size="1.778" layer="95"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="58.42" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="45.72" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
-<junction x="45.72" y="58.42"/>
+<wire x1="5.08" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<junction x="5.08" y="58.42"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="VCC"/>
@@ -2530,19 +2533,19 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VCC"/>
-<wire x1="269.24" y1="50.8" x2="271.78" y2="50.8" width="0.1524" layer="91"/>
-<label x="271.78" y="50.8" size="1.778" layer="95" xref="yes"/>
+<wire x1="281.94" y1="50.8" x2="284.48" y2="50.8" width="0.1524" layer="91"/>
+<label x="284.48" y="50.8" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="45.72" y1="35.56" x2="45.72" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="35.56" x2="5.08" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="A1" pin="ADJ"/>
-<wire x1="17.78" y1="50.8" x2="17.78" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="35.56" x2="45.72" y2="35.56" width="0.1524" layer="91"/>
-<junction x="45.72" y="35.56"/>
+<wire x1="-22.86" y1="50.8" x2="-22.86" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="35.56" x2="5.08" y2="35.56" width="0.1524" layer="91"/>
+<junction x="5.08" y="35.56"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -2714,8 +2717,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M0" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y0"/>
-<wire x1="269.24" y1="45.72" x2="274.32" y2="45.72" width="0.1524" layer="91"/>
-<label x="269.24" y="45.72" size="1.778" layer="95"/>
+<wire x1="281.94" y1="45.72" x2="287.02" y2="45.72" width="0.1524" layer="91"/>
+<label x="281.94" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC3" gate="G$1" pin="CLOCK"/>
@@ -2726,8 +2729,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M1" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y1"/>
-<wire x1="269.24" y1="43.18" x2="274.32" y2="43.18" width="0.1524" layer="91"/>
-<label x="269.24" y="43.18" size="1.778" layer="95"/>
+<wire x1="281.94" y1="43.18" x2="287.02" y2="43.18" width="0.1524" layer="91"/>
+<label x="281.94" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC4" gate="G$1" pin="CLOCK"/>
@@ -2738,8 +2741,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M2" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y2"/>
-<wire x1="269.24" y1="40.64" x2="274.32" y2="40.64" width="0.1524" layer="91"/>
-<label x="269.24" y="40.64" size="1.778" layer="95"/>
+<wire x1="281.94" y1="40.64" x2="287.02" y2="40.64" width="0.1524" layer="91"/>
+<label x="281.94" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="CLOCK"/>
@@ -2750,8 +2753,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M3" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y3"/>
-<wire x1="269.24" y1="38.1" x2="274.32" y2="38.1" width="0.1524" layer="91"/>
-<label x="269.24" y="38.1" size="1.778" layer="95"/>
+<wire x1="281.94" y1="38.1" x2="287.02" y2="38.1" width="0.1524" layer="91"/>
+<label x="281.94" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC6" gate="G$1" pin="CLOCK"/>
@@ -2762,8 +2765,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M4" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y4"/>
-<wire x1="269.24" y1="35.56" x2="274.32" y2="35.56" width="0.1524" layer="91"/>
-<label x="269.24" y="35.56" size="1.778" layer="95"/>
+<wire x1="281.94" y1="35.56" x2="287.02" y2="35.56" width="0.1524" layer="91"/>
+<label x="281.94" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC7" gate="G$1" pin="CLOCK"/>
@@ -2774,8 +2777,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="M5" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="Y5"/>
-<wire x1="269.24" y1="33.02" x2="274.32" y2="33.02" width="0.1524" layer="91"/>
-<label x="269.24" y="33.02" size="1.778" layer="95"/>
+<wire x1="281.94" y1="33.02" x2="287.02" y2="33.02" width="0.1524" layer="91"/>
+<label x="281.94" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="IC8" gate="G$1" pin="CLOCK"/>
@@ -2786,7 +2789,7 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="N$14" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="A0"/>
-<wire x1="223.52" y1="33.02" x2="220.98" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="33.02" x2="220.98" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="33.02" x2="220.98" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="SOSCI/PMBE/CN1/RP4/RB4"/>
 <wire x1="220.98" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
@@ -2795,7 +2798,7 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="N$15" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="A1"/>
-<wire x1="223.52" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="45.72" x2="218.44" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="45.72" x2="218.44" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PGED3/ASDA1/PMD7/CN27/RP5/RB5"/>
 <wire x1="218.44" y1="68.58" x2="187.96" y2="68.58" width="0.1524" layer="91"/>
@@ -2804,7 +2807,7 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="N$16" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="A2"/>
-<wire x1="223.52" y1="43.18" x2="215.9" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="43.18" x2="215.9" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="43.18" x2="215.9" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PGEC3/ASCL1/PMD6/CN24/RP6/RB6"/>
 <wire x1="215.9" y1="66.04" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
@@ -2813,10 +2816,10 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="N$17" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="E2"/>
-<wire x1="223.52" y1="30.48" x2="208.28" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="208.28" y1="30.48" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="30.48" x2="213.36" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="30.48" x2="213.36" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="INT0/PMD5/CN23/RP7/RB7"/>
-<wire x1="208.28" y1="63.5" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="63.5" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -2902,12 +2905,12 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <segment>
 <pinref part="IC2" gate="A1" pin="VI"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="7.62" y1="58.42" x2="2.54" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="2.54" y1="58.42" x2="2.54" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="58.42" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="VDD" gate="G$1" pin="1"/>
-<wire x1="2.54" y1="58.42" x2="-2.54" y2="58.42" width="0.1524" layer="91"/>
-<junction x="2.54" y="58.42"/>
-<label x="5.08" y="60.96" size="1.778" layer="95" rot="R180"/>
+<wire x1="-38.1" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-38.1" y="58.42"/>
+<label x="-35.56" y="60.96" size="1.778" layer="95" rot="R180"/>
 </segment>
 <segment>
 <pinref part="IC10" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
@@ -3361,6 +3364,32 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <pinref part="IC12" gate="G$1" pin="IN_2"/>
 <wire x1="383.54" y1="15.24" x2="381" y2="15.24" width="0.1524" layer="91"/>
 <label x="378.46" y="15.24" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<wire x1="-60.96" y1="76.2" x2="-60.96" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-2.54" x2="-40.64" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-35.56" y1="-2.54" x2="33.02" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-2.54" x2="33.02" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="76.2" x2="-60.96" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-2.54" x2="-35.56" y2="-2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$20" class="0">
+<segment>
+<wire x1="45.72" y1="121.92" x2="45.72" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-2.54" x2="200.66" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="-2.54" x2="200.66" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="121.92" x2="45.72" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$21" class="0">
+<segment>
+<wire x1="228.6" y1="124.46" x2="228.6" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="-66.04" x2="482.6" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="482.6" y1="-66.04" x2="482.6" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="482.6" y1="124.46" x2="228.6" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
