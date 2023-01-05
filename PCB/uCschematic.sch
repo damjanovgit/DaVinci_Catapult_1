@@ -2163,8 +2163,8 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="GND" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="Q1" library="special" library_urn="urn:adsk.eagle:library:367" deviceset="XTAL/S" device="" package3d_urn="urn:adsk.eagle:package:26647/2"/>
-<part name="C6" library="eagle-ltspice" deviceset="C" device="" value="100nF"/>
-<part name="C8" library="eagle-ltspice" deviceset="C" device="" value="100nF"/>
+<part name="C6" library="eagle-ltspice" deviceset="C" device="" value="47pF"/>
+<part name="C8" library="eagle-ltspice" deviceset="C" device="" value="47pF"/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="U1" library="74HC237D-Q100J" deviceset="74HC237D-Q100J" device=""/>
 <part name="IC3" library="MC74HC175ADG" deviceset="MC74HC175ADG" device=""/>
@@ -2211,7 +2211,6 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <part name="SM64" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="RX" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="TX" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="GP_LASER1" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="GP_LASER2" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="CAT_ROTATION" library="con-faston" deviceset="PIN1-2" device=""/>
@@ -2227,6 +2226,17 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="R9" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 <part name="R10" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
+<part name="GND_GP_LASER1" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_GP_LASER2" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_CAT_ANGLE" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_CAT_ROTATION" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SPI/I2C" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM1" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM2" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM3" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM4" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM5" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_SM6" library="con-faston" deviceset="PIN1-2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2237,7 +2247,7 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <text x="106.68" y="-124.46" size="1.778" layer="91">PROGRAMATOR PINS</text>
 <text x="165.1" y="-124.46" size="1.778" layer="91">UART</text>
 <text x="213.36" y="-124.46" size="1.778" layer="91">I2C/SPI</text>
-<text x="127" y="177.8" size="1.778" layer="91">GP</text>
+<text x="154.94" y="177.8" size="1.778" layer="91">GP</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="142.24" y="63.5" smashed="yes">
@@ -2468,9 +2478,6 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <instance part="TX" gate="G$1" x="160.02" y="-106.68" smashed="yes" rot="R270">
 <attribute name="NAME" x="161.29" y="-104.14" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="SUPPLY6" gate="GND" x="220.98" y="30.48" smashed="yes" rot="R270">
-<attribute name="VALUE" x="217.805" y="32.385" size="1.778" layer="96" rot="R270"/>
-</instance>
 <instance part="GP_LASER1" gate="G$1" x="86.36" y="193.04" smashed="yes" rot="R90">
 <attribute name="NAME" x="85.09" y="190.5" size="1.778" layer="95" rot="R90"/>
 </instance>
@@ -2521,6 +2528,39 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <instance part="R10" gate="G$1" x="193.04" y="-60.96" smashed="yes">
 <attribute name="NAME" x="189.23" y="-59.4614" size="1.778" layer="95"/>
 <attribute name="VALUE" x="189.23" y="-64.262" size="1.778" layer="96"/>
+</instance>
+<instance part="GND_GP_LASER1" gate="G$1" x="116.84" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="115.57" y="190.5" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="GND_GP_LASER2" gate="G$1" x="124.46" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="123.19" y="190.5" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="GND_CAT_ANGLE" gate="G$1" x="139.7" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="138.43" y="190.5" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="GND_CAT_ROTATION" gate="G$1" x="132.08" y="193.04" smashed="yes" rot="R90">
+<attribute name="NAME" x="130.81" y="190.5" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="GND_SPI/I2C" gate="G$1" x="187.96" y="-114.3" smashed="yes" rot="R270">
+<attribute name="NAME" x="189.23" y="-111.76" size="1.778" layer="95" rot="R270"/>
+</instance>
+<instance part="GND_SM1" gate="G$1" x="474.98" y="-10.16" smashed="yes">
+<attribute name="NAME" x="472.44" y="-11.43" size="1.778" layer="95"/>
+</instance>
+<instance part="GND_SM2" gate="G$1" x="474.98" y="-15.24" smashed="yes">
+<attribute name="NAME" x="472.44" y="-16.51" size="1.778" layer="95"/>
+</instance>
+<instance part="GND_SM3" gate="G$1" x="474.98" y="-20.32" smashed="yes">
+<attribute name="NAME" x="472.44" y="-21.59" size="1.778" layer="95"/>
+</instance>
+<instance part="GND_SM4" gate="G$1" x="474.98" y="-25.4" smashed="yes">
+<attribute name="NAME" x="472.44" y="-26.67" size="1.778" layer="95"/>
+</instance>
+<instance part="GND_SM5" gate="G$1" x="474.98" y="-30.48" smashed="yes">
+<attribute name="NAME" x="472.44" y="-31.75" size="1.778" layer="95"/>
+</instance>
+<instance part="GND_SM6" gate="G$1" x="474.98" y="-35.56" smashed="yes">
+<attribute name="NAME" x="472.44" y="-36.83" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -2694,11 +2734,6 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <pinref part="GND1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="E2"/>
-<pinref part="SUPPLY6" gate="GND" pin="GND"/>
-<wire x1="236.22" y1="30.48" x2="223.52" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
@@ -2714,6 +2749,57 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="160.02" x2="144.78" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="GND_GP_LASER1" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="187.96" x2="116.84" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="185.42" x2="124.46" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="GND_CAT_ANGLE" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="185.42" x2="134.62" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="185.42" x2="139.7" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="185.42" x2="139.7" y2="187.96" width="0.1524" layer="91"/>
+<pinref part="GND_CAT_ROTATION" gate="G$1" pin="1"/>
+<wire x1="132.08" y1="187.96" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
+<junction x="132.08" y="185.42"/>
+<pinref part="GND_GP_LASER2" gate="G$1" pin="1"/>
+<wire x1="124.46" y1="187.96" x2="124.46" y2="185.42" width="0.1524" layer="91"/>
+<junction x="124.46" y="185.42"/>
+<wire x1="134.62" y1="185.42" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
+<junction x="134.62" y="185.42"/>
+<junction x="134.62" y="167.64"/>
+</segment>
+<segment>
+<pinref part="GND_SPI/I2C" gate="G$1" pin="1"/>
+<wire x1="187.96" y1="-109.22" x2="187.96" y2="-106.68" width="0.1524" layer="91"/>
+<label x="187.96" y="-106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="GND_SM1" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-10.16" x2="467.36" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="GND_SM2" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-15.24" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-10.16" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="GND_SM3" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-20.32" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-15.24" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="467.36" y="-15.24"/>
+<pinref part="GND_SM4" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-25.4" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-20.32" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="467.36" y="-20.32"/>
+<pinref part="GND_SM5" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-30.48" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-25.4" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="467.36" y="-25.4"/>
+<pinref part="GND_SM6" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-35.56" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-30.48" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="467.36" y="-30.48"/>
+<label x="467.36" y="-20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="DISVREG"/>
+<wire x1="96.52" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
+<label x="93.98" y="50.8" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -2826,6 +2912,11 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <wire x1="182.88" y1="-63.5" x2="180.34" y2="-63.5" width="0.1524" layer="91"/>
 <junction x="182.88" y="-63.5"/>
 <label x="180.34" y="-63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="E2"/>
+<wire x1="236.22" y1="30.48" x2="233.68" y2="30.48" width="0.1524" layer="91"/>
+<label x="233.68" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -3843,9 +3934,9 @@ Source: &lt;a href="http://www.st.com/st-web-ui/static/active/en/resource/techni
 <net name="N$44" class="0">
 <segment>
 <wire x1="68.58" y1="213.36" x2="68.58" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="175.26" x2="132.08" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="175.26" x2="132.08" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="213.36" x2="68.58" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="175.26" x2="160.02" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="175.26" x2="160.02" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="213.36" x2="68.58" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
