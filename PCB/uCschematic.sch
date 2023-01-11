@@ -2247,109 +2247,6 @@ Source: &lt;a href="https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS
 </deviceset>
 </devicesets>
 </library>
-<library name="USB3075-30-A">
-<description>&lt;GCT (GLOBAL CONNECTOR TECHNOLOGY) - USB3075-30-A - USB Connector, Micro USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle&lt;/b&gt;&lt;p&gt;
-&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
-<packages>
-<package name="USB307530A">
-<description>&lt;b&gt;USB3075-30-A-4&lt;/b&gt;&lt;br&gt;
-</description>
-<smd name="1" x="-1.3" y="2.65" dx="1.4" dy="0.4" layer="1" rot="R90"/>
-<smd name="2" x="-0.65" y="2.65" dx="1.4" dy="0.4" layer="1" rot="R90"/>
-<smd name="3" x="0" y="2.65" dx="1.4" dy="0.4" layer="1" rot="R90"/>
-<smd name="4" x="0.65" y="2.65" dx="1.4" dy="0.4" layer="1" rot="R90"/>
-<smd name="5" x="1.3" y="2.65" dx="1.4" dy="0.4" layer="1" rot="R90"/>
-<pad name="MH1" x="-3.575" y="0" drill="1.3285" diameter="1.85"/>
-<pad name="MH2" x="3.575" y="0" drill="1.3285" diameter="1.85"/>
-<smd name="MP1" x="-1.125" y="0" dx="1.9" dy="1.75" layer="1" rot="R90"/>
-<smd name="MP2" x="1.125" y="0" dx="1.9" dy="1.75" layer="1" rot="R90"/>
-<smd name="MP3" x="-2.32" y="2.23" dx="1.45" dy="1.15" layer="1" rot="R90"/>
-<smd name="MP4" x="2.32" y="2.23" dx="1.45" dy="1.15" layer="1" rot="R90"/>
-<text x="0" y="0.6" size="1.27" layer="25" align="center">&gt;NAME</text>
-<text x="0" y="0.6" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-3.9" y1="2.8" x2="3.9" y2="2.8" width="0.2" layer="51"/>
-<wire x1="3.9" y1="2.8" x2="3.9" y2="-2.15" width="0.2" layer="51"/>
-<wire x1="3.9" y1="-2.15" x2="-3.9" y2="-2.15" width="0.2" layer="51"/>
-<wire x1="-3.9" y1="-2.15" x2="-3.9" y2="2.8" width="0.2" layer="51"/>
-<wire x1="-5.415" y1="4.35" x2="5.415" y2="4.35" width="0.1" layer="51"/>
-<wire x1="5.415" y1="4.35" x2="5.415" y2="-3.15" width="0.1" layer="51"/>
-<wire x1="5.415" y1="-3.15" x2="-5.415" y2="-3.15" width="0.1" layer="51"/>
-<wire x1="-5.415" y1="-3.15" x2="-5.415" y2="4.35" width="0.1" layer="51"/>
-<wire x1="-3.425" y1="2.8" x2="-3.9" y2="2.8" width="0.1" layer="21"/>
-<wire x1="-3.9" y1="2.8" x2="-3.9" y2="1" width="0.1" layer="21"/>
-<wire x1="-3.9" y1="-1" x2="-3.9" y2="-2.15" width="0.1" layer="21"/>
-<wire x1="-3.9" y1="-2.15" x2="3.9" y2="-2.15" width="0.1" layer="21"/>
-<wire x1="3.9" y1="-2.15" x2="3.9" y2="-1" width="0.1" layer="21"/>
-<wire x1="3.075" y1="2.8" x2="3.9" y2="2.8" width="0.1" layer="21"/>
-<wire x1="3.9" y1="2.8" x2="3.9" y2="1" width="0.1" layer="21"/>
-<wire x1="-1.5" y1="3.825" x2="-1.5" y2="3.825" width="0.2" layer="21"/>
-<wire x1="-1.5" y1="3.825" x2="-1.6" y2="3.825" width="0.2" layer="21" curve="180"/>
-<wire x1="-1.6" y1="3.825" x2="-1.6" y2="3.825" width="0.2" layer="21"/>
-<wire x1="-1.6" y1="3.825" x2="-1.5" y2="3.825" width="0.2" layer="21" curve="180"/>
-</package>
-</packages>
-<symbols>
-<symbol name="USB3075-30-A">
-<wire x1="5.08" y1="2.54" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-15.24" x2="20.32" y2="2.54" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-15.24" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-15.24" width="0.254" layer="94"/>
-<text x="21.59" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
-<text x="21.59" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
-<pin name="1" x="0" y="0" length="middle"/>
-<pin name="2" x="0" y="-2.54" length="middle"/>
-<pin name="3" x="0" y="-5.08" length="middle"/>
-<pin name="4" x="0" y="-7.62" length="middle"/>
-<pin name="5" x="0" y="-10.16" length="middle"/>
-<pin name="MH1" x="0" y="-12.7" length="middle"/>
-<pin name="MH2" x="25.4" y="0" length="middle" rot="R180"/>
-<pin name="MP1" x="25.4" y="-2.54" length="middle" rot="R180"/>
-<pin name="MP2" x="25.4" y="-5.08" length="middle" rot="R180"/>
-<pin name="MP3" x="25.4" y="-7.62" length="middle" rot="R180"/>
-<pin name="MP4" x="25.4" y="-10.16" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="USB3075-30-A" prefix="J">
-<description>&lt;b&gt;GCT (GLOBAL CONNECTOR TECHNOLOGY) - USB3075-30-A - USB Connector, Micro USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle&lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="https://componentsearchengine.com/Datasheets/2/USB3075-30-A.pdf"&gt; Datasheet &lt;/a&gt;</description>
-<gates>
-<gate name="G$1" symbol="USB3075-30-A" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="USB307530A">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="MH1" pad="MH1"/>
-<connect gate="G$1" pin="MH2" pad="MH2"/>
-<connect gate="G$1" pin="MP1" pad="MP1"/>
-<connect gate="G$1" pin="MP2" pad="MP2"/>
-<connect gate="G$1" pin="MP3" pad="MP3"/>
-<connect gate="G$1" pin="MP4" pad="MP4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="ARROW_PART_NUMBER" value="" constant="no"/>
-<attribute name="ARROW_PRICE-STOCK" value="" constant="no"/>
-<attribute name="DESCRIPTION" value="GCT (GLOBAL CONNECTOR TECHNOLOGY) - USB3075-30-A - USB Connector, Micro USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle" constant="no"/>
-<attribute name="HEIGHT" value="2.7mm" constant="no"/>
-<attribute name="MANUFACTURER_NAME" value="GCT (GLOBAL CONNECTOR TECHNOLOGY)" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="USB3075-30-A" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="640-USB3075-30-A" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/GCT/USB3075-30-A?qs=KUoIvG%2F9IlbGMJplbp1ybA%3D%3D" constant="no"/>
-<attribute name="MOUSER_TESTING_PART_NUMBER" value="" constant="no"/>
-<attribute name="MOUSER_TESTING_PRICE-STOCK" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
 <description>&lt;b&gt;Resistors, Capacitors, Inductors&lt;/b&gt;&lt;p&gt;
 Based on the previous libraries:
@@ -6876,6 +6773,97 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="USB1046-GF-0190-L-B-A">
+<description>&lt;USB Connectors USB A Skt, Top Mount, SMT, R/A, GF, Black, With 1.9mm shell stake, T&amp;R&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
+<packages>
+<package name="USB1046GF0190LBA">
+<description>&lt;b&gt;USB1046-GF-0190-L-B-A-2&lt;/b&gt;&lt;br&gt;
+</description>
+<smd name="1" x="-3.5" y="7.28" dx="3" dy="1.3" layer="1" rot="R90"/>
+<smd name="2" x="-1" y="7.28" dx="3" dy="1.3" layer="1" rot="R90"/>
+<smd name="3" x="1" y="7.28" dx="3" dy="1.3" layer="1" rot="R90"/>
+<smd name="4" x="3.5" y="7.28" dx="3" dy="1.3" layer="1" rot="R90"/>
+<pad name="MH1" x="-6.4" y="3.58" drill="2.38" diameter="3.57"/>
+<pad name="MH2" x="6.4" y="3.58" drill="2.38" diameter="3.57"/>
+<text x="0" y="1.04" size="1.27" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="1.04" size="1.27" layer="27" align="center">&gt;VALUE</text>
+<wire x1="-7.25" y1="-6.7" x2="7.25" y2="-6.7" width="0.1" layer="51"/>
+<wire x1="7.25" y1="-6.7" x2="7.25" y2="6.7" width="0.1" layer="51"/>
+<wire x1="7.25" y1="6.7" x2="-7.25" y2="6.7" width="0.1" layer="51"/>
+<wire x1="-7.25" y1="6.7" x2="-7.25" y2="-6.7" width="0.1" layer="51"/>
+<wire x1="-9.185" y1="9.78" x2="9.185" y2="9.78" width="0.1" layer="51"/>
+<wire x1="9.185" y1="9.78" x2="9.185" y2="-7.7" width="0.1" layer="51"/>
+<wire x1="9.185" y1="-7.7" x2="-9.185" y2="-7.7" width="0.1" layer="51"/>
+<wire x1="-9.185" y1="-7.7" x2="-9.185" y2="9.78" width="0.1" layer="51"/>
+<wire x1="-4.5" y1="6.7" x2="-7.25" y2="6.7" width="0.2" layer="21"/>
+<wire x1="-7.25" y1="6.7" x2="-7.25" y2="6.7" width="0.2" layer="21"/>
+<wire x1="-7.25" y1="6.7" x2="-7.25" y2="5.7" width="0.2" layer="21"/>
+<wire x1="-7.25" y1="1.5" x2="-7.25" y2="-6.7" width="0.2" layer="21"/>
+<wire x1="-7.25" y1="-6.7" x2="7.25" y2="-6.7" width="0.2" layer="21"/>
+<wire x1="7.25" y1="-6.7" x2="7.25" y2="1.5" width="0.2" layer="21"/>
+<wire x1="7.25" y1="5.7" x2="7.25" y2="6.7" width="0.2" layer="21"/>
+<wire x1="7.25" y1="6.7" x2="4.5" y2="6.7" width="0.2" layer="21"/>
+<wire x1="-3.5" y1="9.4" x2="-3.5" y2="9.4" width="0.2" layer="21"/>
+<wire x1="-3.5" y1="9.4" x2="-3.5" y2="9.3" width="0.2" layer="21" curve="180"/>
+<wire x1="-3.5" y1="9.3" x2="-3.5" y2="9.3" width="0.2" layer="21"/>
+<wire x1="-3.5" y1="9.3" x2="-3.5" y2="9.4" width="0.2" layer="21" curve="180"/>
+<wire x1="-3.5" y1="9.4" x2="-3.5" y2="9.4" width="0.2" layer="21"/>
+<wire x1="-3.5" y1="9.4" x2="-3.5" y2="9.3" width="0.2" layer="21" curve="180"/>
+</package>
+</packages>
+<symbols>
+<symbol name="USB1046-GF-0190-L-B-A">
+<wire x1="5.08" y1="2.54" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-10.16" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+<text x="19.05" y="7.62" size="1.778" layer="95" align="center-left">&gt;NAME</text>
+<text x="19.05" y="5.08" size="1.778" layer="96" align="center-left">&gt;VALUE</text>
+<pin name="1" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="2" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="3" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="4" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="MH1" x="0" y="0" length="middle"/>
+<pin name="MH2" x="0" y="-2.54" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="USB1046-GF-0190-L-B-A" prefix="J">
+<description>&lt;b&gt;USB Connectors USB A Skt, Top Mount, SMT, R/A, GF, Black, With 1.9mm shell stake, T&amp;R&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="https://gct.co/files/drawings/usb1046.pdf?v=ccb5d20d-0631-4297-aa3c-9c34fccf9fbc"&gt; Datasheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="USB1046-GF-0190-L-B-A" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="USB1046GF0190LBA">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="MH1" pad="MH1"/>
+<connect gate="G$1" pin="MH2" pad="MH2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="ARROW_PART_NUMBER" value="" constant="no"/>
+<attribute name="ARROW_PRICE-STOCK" value="" constant="no"/>
+<attribute name="DESCRIPTION" value="USB Connectors USB A Skt, Top Mount, SMT, R/A, GF, Black, With 1.9mm shell stake, T&amp;R" constant="no"/>
+<attribute name="HEIGHT" value="7.2mm" constant="no"/>
+<attribute name="MANUFACTURER_NAME" value="GCT (GLOBAL CONNECTOR TECHNOLOGY)" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="USB1046-GF-0190-L-B-A" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="640-USB1046GF0190LBA" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.co.uk/ProductDetail/GCT/USB1046-GF-0190-L-B-A?qs=KUoIvG%2F9IlbZOJtEsn1unA%3D%3D" constant="no"/>
+<attribute name="MOUSER_TESTING_PART_NUMBER" value="" constant="no"/>
+<attribute name="MOUSER_TESTING_PRICE-STOCK" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6963,7 +6951,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="R6" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 <part name="R7" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 <part name="R8" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
-<part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="R9" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 <part name="R10" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 <part name="GND_GP_LASER1" library="con-faston" deviceset="PIN1-2" device=""/>
@@ -6971,15 +6958,14 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GND_CAT_ANGLE" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="GND_CAT_ROTATION" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="GND_SPI/I2C" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM1" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM2" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM3" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM4" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM5" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_SM6" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM1" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM2" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM3" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM4" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM5" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="12V_SM6" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="IC13" library="FT230XS-U" deviceset="FT230XS-U" device=""/>
 <part name="C9" library="eagle-ltspice" deviceset="C" device="" value="0.1u"/>
-<part name="J1" library="USB3075-30-A" deviceset="USB3075-30-A" device=""/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="27"/>
 <part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="27"/>
@@ -6996,8 +6982,11 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="GP" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="PGEC/GP" library="con-faston" deviceset="PIN1-2" device=""/>
 <part name="PGEC_PROG" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GP_1" library="con-faston" deviceset="PIN1-2" device=""/>
-<part name="GND_GP_1" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GP_OKIDAC" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="GND_GP_OKIDAC" library="con-faston" deviceset="PIN1-2" device=""/>
+<part name="J2" library="USB1046-GF-0190-L-B-A" deviceset="USB1046-GF-0190-L-B-A" device=""/>
+<part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
+<part name="R13" library="eagle-ltspice" deviceset="R" device="" value="10k"/>
 </parts>
 <sheets>
 <sheet>
@@ -7007,7 +6996,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <text x="441.96" y="-63.5" size="1.778" layer="91">STEPPER MOTOR CONTROLLER</text>
 <text x="106.68" y="-124.46" size="1.778" layer="91">PROGRAMATOR PINS</text>
 <text x="213.36" y="-124.46" size="1.778" layer="91">I2C/SPI</text>
-<text x="154.94" y="177.8" size="1.778" layer="91">GP</text>
+<text x="154.94" y="203.2" size="1.778" layer="91">GP</text>
 <text x="177.8" y="-152.4" size="1.778" layer="91">Mozda treba softverski rijesiti pinove za TX i RX</text>
 <text x="274.32" y="-228.6" size="1.778" layer="91">USB/UART converter</text>
 </plain>
@@ -7070,8 +7059,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE" x="-40.005" y="40.005" size="1.778" layer="96"/>
 </instance>
 <instance part="VDD" gate="G$1" x="-48.26" y="58.42" smashed="yes" rot="R180">
-<attribute name="NAME" x="-45.72" y="57.15" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-45.72" y="60.96" size="1.778" layer="96" rot="R180"/>
+<attribute name="NAME" x="-48.26" y="57.15" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="246.38" y="-5.08" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="SUPPLY1" gate="GND" x="17.78" y="15.24" smashed="yes">
 <attribute name="VALUE" x="15.875" y="12.065" size="1.778" layer="96"/>
@@ -7234,17 +7223,17 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="SM64" gate="G$1" x="474.98" y="12.7" smashed="yes">
 <attribute name="NAME" x="472.44" y="11.43" size="1.778" layer="95"/>
 </instance>
-<instance part="GP_LASER1" gate="G$1" x="86.36" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="85.09" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GP_LASER1" gate="G$1" x="86.36" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="85.09" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GP_LASER2" gate="G$1" x="93.98" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="92.71" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GP_LASER2" gate="G$1" x="93.98" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="92.71" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="CAT_ROTATION" gate="G$1" x="101.6" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="100.33" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="CAT_ROTATION" gate="G$1" x="101.6" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="100.33" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="CAT_ANGLE" gate="G$1" x="109.22" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="107.95" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="CAT_ANGLE" gate="G$1" x="109.22" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="107.95" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="SCLK/SCL" gate="G$1" x="193.04" y="-114.3" smashed="yes" rot="R270">
 <attribute name="NAME" x="194.31" y="-111.76" size="1.778" layer="95" rot="R270"/>
@@ -7271,11 +7260,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="VALUE" x="113.03" y="155.702" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R8" gate="G$1" x="144.78" y="170.18" smashed="yes" rot="R270">
-<attribute name="NAME" x="146.2786" y="173.99" size="1.778" layer="95" rot="R270"/>
-<attribute name="VALUE" x="141.478" y="173.99" size="1.778" layer="96" rot="R270"/>
-</instance>
-<instance part="SUPPLY7" gate="GND" x="134.62" y="144.78" smashed="yes">
-<attribute name="VALUE" x="132.715" y="141.605" size="1.778" layer="96"/>
+<attribute name="NAME" x="146.2786" y="199.39" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="141.478" y="199.39" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R9" gate="G$1" x="193.04" y="-68.58" smashed="yes">
 <attribute name="NAME" x="189.23" y="-67.0814" size="1.778" layer="95"/>
@@ -7285,37 +7271,37 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="NAME" x="189.23" y="-59.4614" size="1.778" layer="95"/>
 <attribute name="VALUE" x="189.23" y="-64.262" size="1.778" layer="96"/>
 </instance>
-<instance part="GND_GP_LASER1" gate="G$1" x="116.84" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="115.57" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GND_GP_LASER1" gate="G$1" x="116.84" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="115.57" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GND_GP_LASER2" gate="G$1" x="124.46" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="123.19" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GND_GP_LASER2" gate="G$1" x="124.46" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="123.19" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GND_CAT_ANGLE" gate="G$1" x="139.7" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="138.43" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GND_CAT_ANGLE" gate="G$1" x="139.7" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="138.43" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GND_CAT_ROTATION" gate="G$1" x="132.08" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="130.81" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GND_CAT_ROTATION" gate="G$1" x="132.08" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="130.81" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
 <instance part="GND_SPI/I2C" gate="G$1" x="187.96" y="-114.3" smashed="yes" rot="R270">
 <attribute name="NAME" x="189.23" y="-111.76" size="1.778" layer="95" rot="R270"/>
 </instance>
-<instance part="GND_SM1" gate="G$1" x="474.98" y="-10.16" smashed="yes">
+<instance part="12V_SM1" gate="G$1" x="474.98" y="-10.16" smashed="yes">
 <attribute name="NAME" x="472.44" y="-11.43" size="1.778" layer="95"/>
 </instance>
-<instance part="GND_SM2" gate="G$1" x="474.98" y="-15.24" smashed="yes">
+<instance part="12V_SM2" gate="G$1" x="474.98" y="-15.24" smashed="yes">
 <attribute name="NAME" x="472.44" y="-16.51" size="1.778" layer="95"/>
 </instance>
-<instance part="GND_SM3" gate="G$1" x="474.98" y="-20.32" smashed="yes">
+<instance part="12V_SM3" gate="G$1" x="474.98" y="-20.32" smashed="yes">
 <attribute name="NAME" x="472.44" y="-21.59" size="1.778" layer="95"/>
 </instance>
-<instance part="GND_SM4" gate="G$1" x="474.98" y="-25.4" smashed="yes">
+<instance part="12V_SM4" gate="G$1" x="474.98" y="-25.4" smashed="yes">
 <attribute name="NAME" x="472.44" y="-26.67" size="1.778" layer="95"/>
 </instance>
-<instance part="GND_SM5" gate="G$1" x="474.98" y="-30.48" smashed="yes">
+<instance part="12V_SM5" gate="G$1" x="474.98" y="-30.48" smashed="yes">
 <attribute name="NAME" x="472.44" y="-31.75" size="1.778" layer="95"/>
 </instance>
-<instance part="GND_SM6" gate="G$1" x="474.98" y="-35.56" smashed="yes">
+<instance part="12V_SM6" gate="G$1" x="474.98" y="-35.56" smashed="yes">
 <attribute name="NAME" x="472.44" y="-36.83" size="1.778" layer="95"/>
 </instance>
 <instance part="IC13" gate="G$1" x="175.26" y="-162.56" smashed="yes">
@@ -7326,12 +7312,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <attribute name="NAME" x="158.496" y="-206.121" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="158.496" y="-201.041" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="J1" gate="G$1" x="254" y="-187.96" smashed="yes">
-<attribute name="NAME" x="275.59" y="-180.34" size="1.778" layer="95" align="center-left"/>
-<attribute name="VALUE" x="275.59" y="-182.88" size="1.778" layer="96" align="center-left"/>
-</instance>
-<instance part="SUPPLY6" gate="GND" x="264.16" y="-215.9" smashed="yes">
-<attribute name="VALUE" x="262.255" y="-219.075" size="1.778" layer="96"/>
+<instance part="SUPPLY6" gate="GND" x="251.46" y="-215.9" smashed="yes">
+<attribute name="VALUE" x="249.555" y="-219.075" size="1.778" layer="96"/>
 </instance>
 <instance part="R11" gate="G$1" x="233.68" y="-190.5" smashed="yes">
 <attribute name="NAME" x="229.87" y="-189.0014" size="1.778" layer="95"/>
@@ -7390,11 +7372,22 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <instance part="PGEC_PROG" gate="G$1" x="81.28" y="-58.42" smashed="yes" rot="R180">
 <attribute name="NAME" x="83.82" y="-59.69" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="GP_1" gate="G$1" x="78.74" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="77.47" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GP_OKIDAC" gate="G$1" x="78.74" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="77.47" y="215.9" size="1.778" layer="95" rot="R90"/>
 </instance>
-<instance part="GND_GP_1" gate="G$1" x="144.78" y="193.04" smashed="yes" rot="R90">
-<attribute name="NAME" x="143.51" y="190.5" size="1.778" layer="95" rot="R90"/>
+<instance part="GND_GP_OKIDAC" gate="G$1" x="144.78" y="218.44" smashed="yes" rot="R90">
+<attribute name="NAME" x="143.51" y="215.9" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="J2" gate="G$1" x="281.94" y="-187.96" smashed="yes" rot="MR0">
+<attribute name="NAME" x="262.89" y="-180.34" size="1.778" layer="95" rot="MR0" align="center-left"/>
+<attribute name="VALUE" x="262.89" y="-182.88" size="1.778" layer="96" rot="MR0" align="center-left"/>
+</instance>
+<instance part="SUPPLY8" gate="GND" x="127" y="205.74" smashed="yes">
+<attribute name="VALUE" x="125.095" y="202.565" size="1.778" layer="96"/>
+</instance>
+<instance part="R13" gate="G$1" x="109.22" y="175.26" smashed="yes" rot="R180">
+<attribute name="NAME" x="113.03" y="173.7614" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="110.49" y="178.562" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -7574,71 +7567,32 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="GND1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
-<pinref part="SUPPLY7" gate="GND" pin="GND"/>
-<wire x1="134.62" y1="152.4" x2="134.62" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="160.02" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="160.02" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
-<junction x="134.62" y="152.4"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="167.64" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="167.64" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
-<junction x="134.62" y="160.02"/>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="160.02" x2="144.78" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="GND_GP_LASER1" gate="G$1" pin="1"/>
-<wire x1="116.84" y1="187.96" x2="116.84" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="185.42" x2="124.46" y2="185.42" width="0.1524" layer="91"/>
+<pinref part="GND_GP_OKIDAC" gate="G$1" pin="1"/>
+<wire x1="144.78" y1="210.82" x2="144.78" y2="213.36" width="0.1524" layer="91"/>
 <pinref part="GND_CAT_ANGLE" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="185.42" x2="134.62" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="185.42" x2="139.7" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="185.42" x2="139.7" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="210.82" x2="139.7" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="210.82" x2="144.78" y2="210.82" width="0.1524" layer="91"/>
+<junction x="139.7" y="210.82"/>
+<wire x1="132.08" y1="210.82" x2="139.7" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="GND_CAT_ROTATION" gate="G$1" pin="1"/>
-<wire x1="132.08" y1="187.96" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
-<junction x="132.08" y="185.42"/>
+<wire x1="132.08" y1="213.36" x2="132.08" y2="210.82" width="0.1524" layer="91"/>
+<junction x="132.08" y="210.82"/>
+<wire x1="127" y1="210.82" x2="132.08" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="SUPPLY8" gate="GND" pin="GND"/>
+<wire x1="127" y1="208.28" x2="127" y2="210.82" width="0.1524" layer="91"/>
+<junction x="127" y="210.82"/>
+<wire x1="124.46" y1="210.82" x2="127" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="GND_GP_LASER2" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="187.96" x2="124.46" y2="185.42" width="0.1524" layer="91"/>
-<junction x="124.46" y="185.42"/>
-<wire x1="134.62" y1="185.42" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
-<junction x="134.62" y="185.42"/>
-<junction x="134.62" y="167.64"/>
-<wire x1="139.7" y1="185.42" x2="144.78" y2="185.42" width="0.1524" layer="91"/>
-<junction x="139.7" y="185.42"/>
-<pinref part="GND_GP_1" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="185.42" x2="144.78" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="213.36" x2="124.46" y2="210.82" width="0.1524" layer="91"/>
+<junction x="124.46" y="210.82"/>
+<pinref part="GND_GP_LASER1" gate="G$1" pin="1"/>
+<wire x1="116.84" y1="213.36" x2="116.84" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="210.82" x2="124.46" y2="210.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND_SPI/I2C" gate="G$1" pin="1"/>
 <wire x1="187.96" y1="-109.22" x2="187.96" y2="-106.68" width="0.1524" layer="91"/>
 <label x="187.96" y="-106.68" size="1.778" layer="95" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<pinref part="GND_SM1" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-10.16" x2="467.36" y2="-10.16" width="0.1524" layer="91"/>
-<pinref part="GND_SM2" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-15.24" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="467.36" y1="-10.16" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="GND_SM3" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-20.32" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="467.36" y1="-15.24" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="467.36" y="-15.24"/>
-<pinref part="GND_SM4" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-25.4" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="467.36" y1="-20.32" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
-<junction x="467.36" y="-20.32"/>
-<pinref part="GND_SM5" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-30.48" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
-<wire x1="467.36" y1="-25.4" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
-<junction x="467.36" y="-25.4"/>
-<pinref part="GND_SM6" gate="G$1" pin="1"/>
-<wire x1="469.9" y1="-35.56" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
-<wire x1="467.36" y1="-30.48" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
-<junction x="467.36" y="-30.48"/>
-<label x="467.36" y="-20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="DISVREG"/>
@@ -7656,42 +7610,19 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <label x="210.82" y="-170.18" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="MH1"/>
-<wire x1="254" y1="-200.66" x2="251.46" y2="-200.66" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="-200.66" x2="251.46" y2="-210.82" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="-210.82" x2="264.16" y2="-210.82" width="0.1524" layer="91"/>
-<pinref part="SUPPLY6" gate="GND" pin="GND"/>
-<wire x1="264.16" y1="-210.82" x2="264.16" y2="-213.36" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="MH2"/>
-<wire x1="279.4" y1="-187.96" x2="284.48" y2="-187.96" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="MP1"/>
-<wire x1="284.48" y1="-187.96" x2="284.48" y2="-190.5" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="-190.5" x2="279.4" y2="-190.5" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="MP2"/>
-<wire x1="284.48" y1="-190.5" x2="284.48" y2="-193.04" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="-193.04" x2="279.4" y2="-193.04" width="0.1524" layer="91"/>
-<junction x="284.48" y="-190.5"/>
-<pinref part="J1" gate="G$1" pin="MP3"/>
-<wire x1="284.48" y1="-193.04" x2="284.48" y2="-195.58" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="-195.58" x2="279.4" y2="-195.58" width="0.1524" layer="91"/>
-<junction x="284.48" y="-193.04"/>
-<pinref part="J1" gate="G$1" pin="MP4"/>
-<wire x1="284.48" y1="-195.58" x2="284.48" y2="-198.12" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="-198.12" x2="279.4" y2="-198.12" width="0.1524" layer="91"/>
-<junction x="284.48" y="-195.58"/>
-<wire x1="264.16" y1="-210.82" x2="284.48" y2="-210.82" width="0.1524" layer="91"/>
-<wire x1="284.48" y1="-210.82" x2="284.48" y2="-198.12" width="0.1524" layer="91"/>
-<junction x="264.16" y="-210.82"/>
-<junction x="284.48" y="-198.12"/>
+<wire x1="215.9" y1="-180.34" x2="220.98" y2="-180.34" width="0.1524" layer="91"/>
+<label x="220.98" y="-180.34" size="1.6764" layer="95" xref="yes"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<wire x1="289.56" y1="43.18" x2="292.1" y2="43.18" width="0.1524" layer="91"/>
+<label x="292.1" y="43.18" size="1.6764" layer="95" rot="R270" xref="yes"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+</segment>
+<segment>
 <pinref part="C9" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="-208.28" x2="160.02" y2="-210.82" width="0.1524" layer="91"/>
 <wire x1="160.02" y1="-210.82" x2="238.76" y2="-210.82" width="0.1524" layer="91"/>
-<junction x="251.46" y="-210.82"/>
-<pinref part="J1" gate="G$1" pin="5"/>
-<wire x1="238.76" y1="-210.82" x2="251.46" y2="-210.82" width="0.1524" layer="91"/>
-<wire x1="254" y1="-198.12" x2="251.46" y2="-198.12" width="0.1524" layer="91"/>
-<wire x1="251.46" y1="-198.12" x2="251.46" y2="-200.66" width="0.1524" layer="91"/>
-<junction x="251.46" y="-200.66"/>
 <pinref part="C11" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="-203.2" x2="233.68" y2="-205.74" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="-205.74" x2="238.76" y2="-205.74" width="0.1524" layer="91"/>
@@ -7701,16 +7632,22 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="238.76" y1="-205.74" x2="238.76" y2="-210.82" width="0.1524" layer="91"/>
 <junction x="238.76" y="-205.74"/>
 <junction x="238.76" y="-210.82"/>
-</segment>
-<segment>
-<wire x1="215.9" y1="-180.34" x2="220.98" y2="-180.34" width="0.1524" layer="91"/>
-<label x="220.98" y="-180.34" size="1.6764" layer="95" xref="yes"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-</segment>
-<segment>
-<wire x1="289.56" y1="43.18" x2="292.1" y2="43.18" width="0.1524" layer="91"/>
-<label x="292.1" y="43.18" size="1.6764" layer="95" rot="R270" xref="yes"/>
-<pinref part="C14" gate="G$1" pin="1"/>
+<pinref part="J2" gate="G$1" pin="4"/>
+<wire x1="238.76" y1="-210.82" x2="251.46" y2="-210.82" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="-210.82" x2="259.08" y2="-210.82" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="-210.82" x2="259.08" y2="-195.58" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="-210.82" x2="287.02" y2="-210.82" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-210.82" x2="287.02" y2="-190.5" width="0.1524" layer="91"/>
+<junction x="259.08" y="-210.82"/>
+<pinref part="J2" gate="G$1" pin="MH2"/>
+<wire x1="287.02" y1="-190.5" x2="281.94" y2="-190.5" width="0.1524" layer="91"/>
+<pinref part="J2" gate="G$1" pin="MH1"/>
+<wire x1="287.02" y1="-190.5" x2="287.02" y2="-187.96" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="-187.96" x2="281.94" y2="-187.96" width="0.1524" layer="91"/>
+<junction x="287.02" y="-190.5"/>
+<pinref part="SUPPLY6" gate="GND" pin="GND"/>
+<wire x1="251.46" y1="-213.36" x2="251.46" y2="-210.82" width="0.1524" layer="91"/>
+<junction x="251.46" y="-210.82"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -7860,6 +7797,25 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="-172.72" x2="220.98" y2="-172.72" width="0.1524" layer="91"/>
 <junction x="215.9" y="-172.72"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="152.4" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="160.02" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="160.02" x2="134.62" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="167.64" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="167.64" x2="134.62" y2="160.02" width="0.1524" layer="91"/>
+<junction x="134.62" y="160.02"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="160.02" x2="144.78" y2="165.1" width="0.1524" layer="91"/>
+<pinref part="R13" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="175.26" x2="134.62" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="175.26" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
+<junction x="134.62" y="167.64"/>
+<label x="134.62" y="175.26" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$11" class="0">
@@ -8185,38 +8141,6 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <pinref part="IC9" gate="G$1" pin="OUT7"/>
 <wire x1="469.9" y1="86.36" x2="441.96" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="SM23" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="VDD" class="0">
-<segment>
-<pinref part="IC9" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
-<wire x1="441.96" y1="83.82" x2="444.5" y2="83.82" width="0.1524" layer="91"/>
-<label x="444.5" y="83.82" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC2" gate="A1" pin="VI"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="58.42" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="VDD" gate="G$1" pin="1"/>
-<wire x1="-38.1" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
-<junction x="-38.1" y="58.42"/>
-<label x="-35.56" y="60.96" size="1.778" layer="95" rot="R180"/>
-</segment>
-<segment>
-<pinref part="IC10" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
-<wire x1="441.96" y1="55.88" x2="444.5" y2="55.88" width="0.1524" layer="91"/>
-<label x="444.5" y="55.88" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC11" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
-<wire x1="441.96" y1="27.94" x2="444.5" y2="27.94" width="0.1524" layer="91"/>
-<label x="444.5" y="27.94" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="IC12" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
-<wire x1="441.96" y1="0" x2="444.5" y2="0" width="0.1524" layer="91"/>
-<label x="444.5" y="0" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$46" class="0">
@@ -8762,7 +8686,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$17" class="0">
 <segment>
 <pinref part="GP_LASER1" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="187.96" x2="86.36" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="213.36" x2="86.36" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="RA4/CN0/PMA1/T1CK/SOSCO"/>
 <wire x1="86.36" y1="167.64" x2="86.36" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="71.12" x2="96.52" y2="71.12" width="0.1524" layer="91"/>
@@ -8774,10 +8698,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$29" class="0">
 <segment>
 <pinref part="GP_LASER2" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="187.96" x2="93.98" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="185.42" x2="88.9" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="213.36" x2="93.98" y2="210.82" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="210.82" x2="88.9" y2="210.82" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="RA1/CN3/VR-/AN1"/>
-<wire x1="88.9" y1="185.42" x2="88.9" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="210.82" x2="88.9" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="160.02" x2="88.9" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="78.74" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
@@ -8788,10 +8712,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$37" class="0">
 <segment>
 <pinref part="CAT_ROTATION" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="187.96" x2="101.6" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="182.88" x2="91.44" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="213.36" x2="101.6" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="208.28" x2="91.44" y2="208.28" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="RA0/CN2/VR+/AN0"/>
-<wire x1="91.44" y1="182.88" x2="91.44" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="208.28" x2="91.44" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="152.4" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -8802,15 +8726,15 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$38" class="0">
 <segment>
 <pinref part="CAT_ANGLE" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="187.96" x2="109.22" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="182.88" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="213.36" x2="109.22" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="185.42" x2="144.78" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="INT0/PMD5/CN23/RP7/RB7"/>
-<wire x1="144.78" y1="182.88" x2="203.2" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="182.88" x2="203.2" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="185.42" x2="203.2" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="185.42" x2="203.2" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="63.5" x2="187.96" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="144.78" y1="175.26" x2="144.78" y2="182.88" width="0.1524" layer="91"/>
-<junction x="144.78" y="182.88"/>
+<wire x1="144.78" y1="175.26" x2="144.78" y2="185.42" width="0.1524" layer="91"/>
+<junction x="144.78" y="185.42"/>
 </segment>
 </net>
 <net name="N$39" class="0">
@@ -8871,10 +8795,10 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </net>
 <net name="N$44" class="0">
 <segment>
-<wire x1="68.58" y1="213.36" x2="68.58" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="175.26" x2="160.02" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="175.26" x2="160.02" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="213.36" x2="68.58" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="238.76" x2="68.58" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="200.66" x2="160.02" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="200.66" x2="160.02" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="238.76" x2="68.58" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$53" class="0">
@@ -8916,23 +8840,23 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <net name="N$45" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="J1" gate="G$1" pin="2"/>
 <wire x1="238.76" y1="-190.5" x2="243.84" y2="-190.5" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="243.84" y1="-190.5" x2="254" y2="-190.5" width="0.1524" layer="91"/>
 <wire x1="243.84" y1="-195.58" x2="243.84" y2="-190.5" width="0.1524" layer="91"/>
 <junction x="243.84" y="-190.5"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="259.08" y1="-190.5" x2="243.84" y2="-190.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$54" class="0">
 <segment>
 <pinref part="R12" gate="G$1" pin="2"/>
-<pinref part="J1" gate="G$1" pin="3"/>
 <wire x1="226.06" y1="-193.04" x2="233.68" y2="-193.04" width="0.1524" layer="91"/>
 <pinref part="C11" gate="G$1" pin="2"/>
-<wire x1="233.68" y1="-193.04" x2="254" y2="-193.04" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="-193.04" x2="259.08" y2="-193.04" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="-195.58" x2="233.68" y2="-193.04" width="0.1524" layer="91"/>
 <junction x="233.68" y="-193.04"/>
+<pinref part="J2" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="N$57" class="0">
@@ -8987,16 +8911,74 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="116.84" y1="-58.42" x2="116.84" y2="-101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="GP_1" class="0">
+<net name="12V" class="0">
+<segment>
+<pinref part="12V_SM1" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-10.16" x2="467.36" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="12V_SM2" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-15.24" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-10.16" x2="467.36" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="12V_SM3" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-20.32" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-15.24" x2="467.36" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="467.36" y="-15.24"/>
+<pinref part="12V_SM4" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-25.4" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-20.32" x2="467.36" y2="-25.4" width="0.1524" layer="91"/>
+<junction x="467.36" y="-20.32"/>
+<pinref part="12V_SM5" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-30.48" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-25.4" x2="467.36" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="467.36" y="-25.4"/>
+<pinref part="12V_SM6" gate="G$1" pin="1"/>
+<wire x1="469.9" y1="-35.56" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="467.36" y1="-30.48" x2="467.36" y2="-35.56" width="0.1524" layer="91"/>
+<junction x="467.36" y="-30.48"/>
+<label x="467.36" y="-20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC9" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
+<wire x1="441.96" y1="83.82" x2="444.5" y2="83.82" width="0.1524" layer="91"/>
+<label x="444.5" y="83.82" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="A1" pin="VI"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<wire x1="-33.02" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="58.42" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="VDD" gate="G$1" pin="1"/>
+<wire x1="-38.1" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-38.1" y="58.42"/>
+<label x="-35.56" y="60.96" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="IC10" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
+<wire x1="441.96" y1="55.88" x2="444.5" y2="55.88" width="0.1524" layer="91"/>
+<label x="444.5" y="55.88" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC11" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
+<wire x1="441.96" y1="27.94" x2="444.5" y2="27.94" width="0.1524" layer="91"/>
+<label x="444.5" y="27.94" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC12" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
+<wire x1="441.96" y1="0" x2="444.5" y2="0" width="0.1524" layer="91"/>
+<label x="444.5" y="0" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="GP_OKIDAC" class="0">
 <segment>
 <pinref part="GP" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="-48.26" x2="99.06" y2="-48.26" width="0.1524" layer="91"/>
-<label x="96.52" y="-48.26" size="1.778" layer="95"/>
+<label x="88.9" y="-48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="GP_1" gate="G$1" pin="1"/>
-<wire x1="78.74" y1="187.96" x2="78.74" y2="167.64" width="0.1524" layer="91"/>
-<label x="78.74" y="167.64" size="1.778" layer="95" rot="R270"/>
+<pinref part="GP_OKIDAC" gate="G$1" pin="1"/>
+<wire x1="78.74" y1="213.36" x2="78.74" y2="175.26" width="0.1524" layer="91"/>
+<label x="78.74" y="213.36" size="1.778" layer="95" rot="R270"/>
+<pinref part="R13" gate="G$1" pin="2"/>
+<wire x1="78.74" y1="175.26" x2="104.14" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
