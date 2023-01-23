@@ -7480,6 +7480,7 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <part name="I2C_SPI" library="68000-105HTLF" deviceset="68000-105HTLF" device=""/>
 <part name="PGEC_GP" library="5-146280-3" deviceset="5-146280-3" device=""/>
 <part name="PROG_VDD" library="5-146280-3" deviceset="5-146280-3" device=""/>
+<part name="C20" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="" package3d_urn="urn:adsk.eagle:package:13265/1" value="100u"/>
 </parts>
 <sheets>
 <sheet>
@@ -7551,9 +7552,9 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <instance part="SUPPLY5" gate="GND" x="-38.1" y="43.18" smashed="yes">
 <attribute name="VALUE" x="-40.005" y="40.005" size="1.778" layer="96"/>
 </instance>
-<instance part="VDD" gate="G$1" x="-48.26" y="58.42" smashed="yes" rot="R180">
-<attribute name="NAME" x="-48.26" y="57.15" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-48.26" y="60.96" size="1.778" layer="96"/>
+<instance part="VDD" gate="G$1" x="-55.88" y="58.42" smashed="yes" rot="R180">
+<attribute name="NAME" x="-55.88" y="57.15" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-55.88" y="60.96" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY1" gate="GND" x="17.78" y="15.24" smashed="yes">
 <attribute name="VALUE" x="15.875" y="12.065" size="1.778" layer="96"/>
@@ -7762,6 +7763,10 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <attribute name="NAME" x="52.07" y="-91.44" size="1.778" layer="95" rot="R180" align="center-left"/>
 <attribute name="VALUE" x="52.07" y="-88.9" size="1.778" layer="96" rot="R180" align="center-left"/>
 </instance>
+<instance part="C20" gate="G$1" x="-45.72" y="50.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="-47.244" y="50.419" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-47.244" y="55.499" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7825,6 +7830,10 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <pinref part="SUPPLY5" gate="GND" pin="GND"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="-38.1" y1="45.72" x2="-38.1" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="C20" gate="G$1" pin="1"/>
+<wire x1="-45.72" y1="48.26" x2="-45.72" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="45.72" x2="-38.1" y2="45.72" width="0.1524" layer="91"/>
+<junction x="-38.1" y="45.72"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -9342,9 +9351,13 @@ Source: &lt;a href="https://datasheet.datasheetarchive.com/originals/distributor
 <wire x1="-33.02" y1="58.42" x2="-38.1" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="-38.1" y1="58.42" x2="-38.1" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="VDD" gate="G$1" pin="1"/>
-<wire x1="-38.1" y1="58.42" x2="-43.18" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="58.42" x2="-45.72" y2="58.42" width="0.1524" layer="91"/>
 <junction x="-38.1" y="58.42"/>
 <label x="-35.56" y="60.96" size="1.778" layer="95" rot="R180"/>
+<pinref part="C20" gate="G$1" pin="2"/>
+<wire x1="-45.72" y1="58.42" x2="-50.8" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="55.88" x2="-45.72" y2="58.42" width="0.1524" layer="91"/>
+<junction x="-45.72" y="58.42"/>
 </segment>
 <segment>
 <pinref part="IC10" gate="G$1" pin="COMMON_FREE_WHEELING_DIODES"/>
