@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -58,6 +59,8 @@
 <layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 </layers>
 <board>
+<fusionsync huburn="a.YnVzaW5lc3M6Z21haWwzMDU4MzU4" projecturn="a.YnVzaW5lc3M6Z21haWwzMDU4MzU4I0QyMDIzMDEyMjYwMDU1NTQ1Ng" f3durn="urn:adsk.wipprod:dm.lineage:m6aeSOGxQCycGuD7MMdc2A" pcbguid="" lastpulledtime="" lastsyncedchangeguid="" latestrevisionid="6b7b96d6-c50f-41c6-b4f9-75f8beacbccb" lastsyncedrevisionid="6b7b96d6-c50f-41c6-b4f9-75f8beacbccb" lastboardhashguid="5d82125e-5e9a-8006-d5cd-4bef369c5887" lastpushedtime="2023-01-25T20:23:47Z" linktopcb3d="true"/>
+<fusionteam huburn="a.YnVzaW5lc3M6Z21haWwzMDU4MzU4" projecturn="a.YnVzaW5lc3M6Z21haWwzMDU4MzU4I0QyMDIzMDEyMjYwMDU2MjgwNg" folderUrn="urn:adsk.wipprod:fs.folder:co.7pZCTY4gRzmUgyOwDCL8dA" urn="urn:adsk.wipprod:dm.lineage:uWLtpyp_SCW_1LYhudfAFA"  versionUrn="urn:adsk.wipprod:fs.file:vf.uWLtpyp_SCW_1LYhudfAFA?version=1" camFileUrn="" camFileVersionUrn="" lastpublishedchangeguid="6b58e3ef-727a-4d9a-330f-2741c576d1f7"/>
 <plain>
 <wire x1="0" y1="0" x2="90" y2="0" width="0" layer="20"/>
 <wire x1="90" y1="0" x2="90" y2="80" width="0" layer="20"/>
@@ -1693,16 +1696,23 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="0.25mm"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="2"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
@@ -2384,23 +2394,23 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <contactref element="C2" pad="1"/>
 <contactref element="IC1" pad="27"/>
 <contactref element="C20" pad="1"/>
-<wire x1="55.355165625" y1="17.308121875" x2="55.355165625" y2="17.308121875" width="0" layer="19" extent="1-16"/>
-<wire x1="22.855165625" y1="33.408121875" x2="22.855165625" y2="33.408121875" width="0" layer="19" extent="1-16"/>
-<wire x1="50.155165625" y1="41.708121875" x2="50.155165625" y2="41.708121875" width="0" layer="19" extent="1-16"/>
-<wire x1="24.255165625" y1="25.608121875" x2="24.255165625" y2="25.608121875" width="0" layer="19" extent="1-16"/>
-<wire x1="50.955165625" y1="47.308121875" x2="50.955165625" y2="47.308121875" width="0" layer="19" extent="1-16"/>
-<wire x1="54.955165625" y1="23.808121875" x2="54.955165625" y2="23.808121875" width="0" layer="19" extent="1-16"/>
-<wire x1="29.155165625" y1="14.508121875" x2="29.155165625" y2="14.508121875" width="0" layer="19" extent="1-16"/>
-<wire x1="44.455165625" y1="24.408121875" x2="44.455165625" y2="24.408121875" width="0" layer="19" extent="1-16"/>
-<wire x1="48.155165625" y1="59.908121875" x2="48.155165625" y2="59.908121875" width="0" layer="19" extent="1-16"/>
-<wire x1="45.355165625" y1="44.008121875" x2="45.355165625" y2="44.008121875" width="0" layer="19" extent="1-16"/>
-<wire x1="59.955165625" y1="14.508121875" x2="59.955165625" y2="14.508121875" width="0" layer="19" extent="1-16"/>
-<wire x1="58.655165625" y1="15.308121875" x2="58.655165625" y2="15.308121875" width="0" layer="19" extent="1-16"/>
-<wire x1="68.105165625" y1="13.358121875" x2="68.105165625" y2="13.358121875" width="0" layer="19" extent="1-16"/>
-<wire x1="74.155165625" y1="18.858121875" x2="74.155165625" y2="18.858121875" width="0" layer="19" extent="1-16"/>
-<wire x1="38.305165625" y1="14.958121875" x2="38.305165625" y2="14.958121875" width="0" layer="19" extent="1-16"/>
-<wire x1="33.905165625" y1="21.408121875" x2="33.905165625" y2="21.408121875" width="0" layer="19" extent="1-16"/>
-<wire x1="42.99005625" y1="14.89306875" x2="42.99005625" y2="14.89306875" width="0" layer="19" extent="1-16"/>
+<via x="55.355165625" y="17.308121875" extent="1-16" drill="0.35"/>
+<via x="22.855165625" y="33.408121875" extent="1-16" drill="0.35"/>
+<via x="50.155165625" y="41.708121875" extent="1-16" drill="0.35"/>
+<via x="24.255165625" y="25.608121875" extent="1-16" drill="0.35"/>
+<via x="50.955165625" y="47.308121875" extent="1-16" drill="0.35"/>
+<via x="54.955165625" y="23.808121875" extent="1-16" drill="0.35"/>
+<via x="29.155165625" y="14.508121875" extent="1-16" drill="0.35"/>
+<via x="44.455165625" y="24.408121875" extent="1-16" drill="0.35"/>
+<via x="48.155165625" y="59.908121875" extent="1-16" drill="0.35"/>
+<via x="45.355165625" y="44.008121875" extent="1-16" drill="0.35"/>
+<via x="59.955165625" y="14.508121875" extent="1-16" drill="0.35"/>
+<via x="58.655165625" y="15.308121875" extent="1-16" drill="0.35"/>
+<via x="68.105165625" y="13.358121875" extent="1-16" drill="0.35"/>
+<via x="74.155165625" y="18.858121875" extent="1-16" drill="0.35"/>
+<via x="38.305165625" y="14.958121875" extent="1-16" drill="0.35"/>
+<via x="33.905165625" y="21.408121875" extent="1-16" drill="0.35"/>
+<via x="42.99005625" y="14.89306875" extent="1-16" drill="0.35"/>
 <wire x1="66.460165625" y1="11.693121875" x2="68.105165625" y2="13.358121875" width="0" layer="19" extent="1-1"/>
 <wire x1="40.790165625" y1="11.663121875" x2="42.99005625" y2="14.89306875" width="0" layer="19" extent="1-1"/>
 <wire x1="53.690165625" y1="29.756121875" x2="48.300165625" y2="28.138121875" width="0" layer="19" extent="1-1"/>
@@ -2496,7 +2506,7 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <wire x1="57.828765625" y1="18.467321875" x2="57.828765625" y2="19.838921875" width="0.508" layer="1"/>
 <wire x1="57.828765625" y1="19.838921875" x2="57.828765625" y2="19.938921875" width="0.508" layer="1"/>
 <wire x1="57.523965625" y1="18.162521875" x2="57.828765625" y2="18.467321875" width="0.508" layer="1"/>
-<wire x1="57.523965625" y1="17.248121875" x2="57.523965625" y2="18.162521875" width="0" layer="19" extent="1-16"/>
+<wire x1="57.523965625" y1="17.248121875" x2="57.523965625" y2="18.162521875" width="0.508" layer="1"/>
 <wire x1="57.523965625" y1="17.248121875" x2="57.570165625" y2="17.143121875" width="0.1524" layer="1"/>
 <wire x1="57.676365625" y1="17.095721875" x2="57.676365625" y2="11.761721875" width="0.254" layer="1"/>
 <wire x1="57.676365625" y1="11.761721875" x2="57.570165625" y2="11.693121875" width="0.1524" layer="1"/>
@@ -4429,6 +4439,20 @@ Note, that not all DRC settings must be set by the manufacturer. Several can be 
 <signal name="N$5">
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 </board>
 </drawing>
+<compatibility>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
+</note>
+</compatibility>
 </eagle>
