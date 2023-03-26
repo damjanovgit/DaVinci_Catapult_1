@@ -48,6 +48,7 @@
 #define FCY 4000000UL
 #include "mcc_generated_files/system.h"
 #include "xc.h"
+#include "coordinate.h"
 #include <libpic30.h>
 
 
@@ -72,6 +73,15 @@ void turn_left(int motor);
 void turn_right(int motor);
 
 uint8_t tx_buffer[30] = "Da-Vinci\n";
+
+COORD laser1_coord = {.x = 0.0, .y =  0.5 };
+COORD laser2_coord = {.x = 0.0, .y = -0.5 };
+
+COORD target_coord = {.x = 0.0, .y =  0.0 };
+
+float laser1_angle;
+float laser2_angle;
+float catapult_angle;
 
 /*
                          Main application
@@ -113,6 +123,7 @@ int main(void) {
             }
             case 'c': // calibrate
             {
+                turn_one_rotation(LASER2, LEFT);
                 break;
             }
             case 'f': // fire
@@ -121,6 +132,7 @@ int main(void) {
             }
             case 'p': // position catapult
             {
+                calculate_target_coords(laser1_coord,laser1_angle,laser2_coord,laser2_angle,&target_coord);
                 break;
             }
         }
@@ -143,11 +155,27 @@ inline void turn(int motor, char side[4]) {
     static int step = 0;
     step = step % 4;
     LATB = IDLE | side[step];
-    __delay_us(1000);
+    __delay_us(500);
     LATB = motor | side[step];
-    __delay_us(1000);
+    __delay_us(500);
     LATB = IDLE;
     step++;
+}
+
+inline void turn_one_rotation(int motor, char side[4]) {
+    static int step = 0;
+    int count = 516*4;
+    while (count > 0) {
+        step = step % 4;
+        LATB = IDLE | side[step];
+        __delay_us(1000);
+        LATB = motor | side[step];
+        __delay_us(1000);
+        LATB = IDLE;
+        step++;
+        count--;
+    }
+
 }
 
 void turn_left(int motor) {
