@@ -95,26 +95,26 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x2d6           0x441  (1089)
-.text                        0x3d6               0x49c           0x6ea  (1770)
-.dinit                       0x872                0x48            0x6c  (108)
-.text                        0x8ba                0x6a            0x9f  (159)
-.init.delay32                0x924                0x1c            0x2a  (42)
-.text                        0x940                0x26            0x39  (57)
+.text                        0x100               0x2dc           0x44a  (1098)
+.text                        0x3dc               0x4ac           0x702  (1794)
+.dinit                       0x888                0x48            0x6c  (108)
+.text                        0x8d0                0x6a            0x9f  (159)
+.init.delay32                0x93a                0x1c            0x2a  (42)
+.text                        0x956                0x26            0x39  (57)
 
-                 Total "program" memory used (bytes):          0xc99  (3225) 4%
+                 Total "program" memory used (bytes):          0xcba  (3258) 4%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0             0xe  (14)
-.ndata                       0x80e                   0             0x2  (2)
-.data                        0x810                   0            0x2e  (46)
-.bss                         0x83e                   0            0x34  (52)
+.nbss                        0x800                   0            0x12  (18)
+.ndata                       0x812                   0             0x2  (2)
+.data                        0x814                   0            0x2e  (46)
+.bss                         0x842                   0            0x32  (50)
 
-                 Total "data" memory used (bytes):           0x72  (114) <1%
+                 Total "data" memory used (bytes):           0x74  (116) <1%
 
 
 Dynamic Memory Usage
@@ -122,9 +122,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x872                              0x3f8e  (16270)
+stack                        0x874                              0x3f8c  (16268)
 
-                 Maximum dynamic memory (bytes):         0x3f8e  (16270)
+                 Maximum dynamic memory (bytes):         0x3f8c  (16268)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -133,19 +133,19 @@ External Symbols in Data Memory (by address):
 
                     0x080a                  _UART1_TxDefaultInterruptHandler
                     0x080c                  _UART1_RxDefaultInterruptHandler
-                    0x0810                  _RIGHT
-                    0x0818                  _LEFT
-                    0x0820                  _tx_buffer
-                    0x0870                  _rx_buffer
+                    0x080e                  _command
+                    0x0814                  _RIGHT
+                    0x081c                  _LEFT
+                    0x0824                  _tx_buffer
 
 External Symbols in Data Memory (by name):
 
-                    0x0818                  _LEFT
-                    0x0810                  _RIGHT
+                    0x081c                  _LEFT
+                    0x0814                  _RIGHT
                     0x080c                  _UART1_RxDefaultInterruptHandler
                     0x080a                  _UART1_TxDefaultInterruptHandler
-                    0x0870                  _rx_buffer
-                    0x0820                  _tx_buffer
+                    0x080e                  _command
+                    0x0824                  _tx_buffer
 
 External Symbols in Program Memory (by address):
 
@@ -160,84 +160,84 @@ External Symbols in Program Memory (by address):
                   0x00028e                  __NVMError
                   0x0002ae                  __U1TXInterrupt
                   0x00030a                  __U1RXInterrupt
-                  0x000370                  __U1ErrInterrupt
-                  0x000386                  __DefaultInterrupt
-                  0x00038a                  _write
-                  0x0003d6                  _UART1_Initialize
-                  0x00040c                  _UART1_SetTxInterruptHandler
-                  0x00042a                  _UART1_SetRxInterruptHandler
-                  0x000448                  _UART1_Read
-                  0x000474                  _UART1_Write
-                  0x00049e                  _UART1_IsRxReady
-                  0x0004b4                  _UART1_IsTxReady
-                  0x0004f0                  _UART1_IsTxDone
-                  0x00058e                  _UART1_ReadBuffer
-                  0x0005dc                  _UART1_WriteBuffer
-                  0x00062a                  _UART1_TransferStatusGet
-                  0x000676                  _UART1_Peek
-                  0x00069a                  _UART1_ReceiveBufferIsEmpty
-                  0x0006aa                  _UART1_TransmitBufferIsFull
-                  0x0006ba                  _UART1_StatusGet
-                  0x0006c2                  _UART1_TransmitBufferSizeGet
-                  0x0006f0                  _UART1_ReceiveBufferSizeGet
-                  0x00071e                  _UART1_Enable
-                  0x000728                  _UART1_Disable
-                  0x000732                  _main
-                  0x000780                  _turn
-                  0x0007f8                  _turn_left
-                  0x000806                  _turn_right
-                  0x000814                  _PIN_MANAGER_Initialize
-                  0x0008ba                  _CLOCK_Initialize
-                  0x000900                  _INTERRUPT_Initialize
-                  0x000924                  ___delay32
-                  0x000958                  _SYSTEM_Initialize
+                  0x000376                  __U1ErrInterrupt
+                  0x00038c                  __DefaultInterrupt
+                  0x000390                  _write
+                  0x0003dc                  _UART1_Initialize
+                  0x000412                  _UART1_SetTxInterruptHandler
+                  0x000430                  _UART1_SetRxInterruptHandler
+                  0x00044e                  _UART1_Read
+                  0x00047a                  _UART1_Write
+                  0x0004a4                  _UART1_IsRxReady
+                  0x0004ba                  _UART1_IsTxReady
+                  0x0004f6                  _UART1_IsTxDone
+                  0x000594                  _UART1_ReadBuffer
+                  0x0005e2                  _UART1_WriteBuffer
+                  0x000630                  _UART1_TransferStatusGet
+                  0x00067c                  _UART1_Peek
+                  0x0006a0                  _UART1_ReceiveBufferIsEmpty
+                  0x0006b0                  _UART1_TransmitBufferIsFull
+                  0x0006c0                  _UART1_StatusGet
+                  0x0006c8                  _UART1_TransmitBufferSizeGet
+                  0x0006f6                  _UART1_ReceiveBufferSizeGet
+                  0x000724                  _UART1_Enable
+                  0x00072e                  _UART1_Disable
+                  0x000738                  _main
+                  0x0007b2                  _turn
+                  0x00080a                  _turn_left
+                  0x00081a                  _turn_right
+                  0x00082a                  _PIN_MANAGER_Initialize
+                  0x0008d0                  _CLOCK_Initialize
+                  0x000916                  _INTERRUPT_Initialize
+                  0x00093a                  ___delay32
+                  0x00096e                  _SYSTEM_Initialize
                   0x00af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0008ba                  _CLOCK_Initialize
-                  0x000900                  _INTERRUPT_Initialize
-                  0x000814                  _PIN_MANAGER_Initialize
-                  0x000958                  _SYSTEM_Initialize
-                  0x000728                  _UART1_Disable
-                  0x00071e                  _UART1_Enable
-                  0x0003d6                  _UART1_Initialize
-                  0x00049e                  _UART1_IsRxReady
-                  0x0004f0                  _UART1_IsTxDone
-                  0x0004b4                  _UART1_IsTxReady
-                  0x000676                  _UART1_Peek
-                  0x000448                  _UART1_Read
-                  0x00058e                  _UART1_ReadBuffer
-                  0x00069a                  _UART1_ReceiveBufferIsEmpty
-                  0x0006f0                  _UART1_ReceiveBufferSizeGet
-                  0x00042a                  _UART1_SetRxInterruptHandler
-                  0x00040c                  _UART1_SetTxInterruptHandler
-                  0x0006ba                  _UART1_StatusGet
-                  0x00062a                  _UART1_TransferStatusGet
-                  0x0006aa                  _UART1_TransmitBufferIsFull
-                  0x0006c2                  _UART1_TransmitBufferSizeGet
-                  0x000474                  _UART1_Write
-                  0x0005dc                  _UART1_WriteBuffer
+                  0x0008d0                  _CLOCK_Initialize
+                  0x000916                  _INTERRUPT_Initialize
+                  0x00082a                  _PIN_MANAGER_Initialize
+                  0x00096e                  _SYSTEM_Initialize
+                  0x00072e                  _UART1_Disable
+                  0x000724                  _UART1_Enable
+                  0x0003dc                  _UART1_Initialize
+                  0x0004a4                  _UART1_IsRxReady
+                  0x0004f6                  _UART1_IsTxDone
+                  0x0004ba                  _UART1_IsTxReady
+                  0x00067c                  _UART1_Peek
+                  0x00044e                  _UART1_Read
+                  0x000594                  _UART1_ReadBuffer
+                  0x0006a0                  _UART1_ReceiveBufferIsEmpty
+                  0x0006f6                  _UART1_ReceiveBufferSizeGet
+                  0x000430                  _UART1_SetRxInterruptHandler
+                  0x000412                  _UART1_SetTxInterruptHandler
+                  0x0006c0                  _UART1_StatusGet
+                  0x000630                  _UART1_TransferStatusGet
+                  0x0006b0                  _UART1_TransmitBufferIsFull
+                  0x0006c8                  _UART1_TransmitBufferSizeGet
+                  0x00047a                  _UART1_Write
+                  0x0005e2                  _UART1_WriteBuffer
                   0x00024e                  __AddressError
-                  0x000386                  __DefaultInterrupt
+                  0x00038c                  __DefaultInterrupt
                   0x00af00                  __FSEC.sec
                   0x00026e                  __MathError
                   0x00028e                  __NVMError
                   0x00020c                  __OscillatorFail
                   0x00022c                  __StackError
-                  0x000370                  __U1ErrInterrupt
+                  0x000376                  __U1ErrInterrupt
                   0x00030a                  __U1RXInterrupt
                   0x0002ae                  __U1TXInterrupt
-                  0x000924                  ___delay32
+                  0x00093a                  ___delay32
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000732                  _main
-                  0x000780                  _turn
-                  0x0007f8                  _turn_left
-                  0x000806                  _turn_right
-                  0x00038a                  _write
+                  0x000738                  _main
+                  0x0007b2                  _turn
+                  0x00080a                  _turn_left
+                  0x00081a                  _turn_right
+                  0x000390                  _write
 
 Memory Configuration
 
@@ -292,7 +292,7 @@ LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x2d6
+.text             0x000100        0x2dc
  *(.init)
  .init            0x000100         0x4c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extended24.o)
                   0x000100                  __resetPRI
@@ -310,22 +310,22 @@ LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                   0x00024e                  __AddressError
                   0x00026e                  __MathError
                   0x00028e                  __NVMError
- .isr.text        0x0002ae         0xd8 build/default/production/mcc_generated_files/uart1.o
+ .isr.text        0x0002ae         0xde build/default/production/mcc_generated_files/uart1.o
                   0x0002ae                  __U1TXInterrupt
                   0x00030a                  __U1RXInterrupt
-                  0x000370                  __U1ErrInterrupt
- .isr             0x000386          0x4 default_isr
-                  0x000386                  __DefaultInterrupt
+                  0x000376                  __U1ErrInterrupt
+ .isr             0x00038c          0x4 default_isr
+                  0x00038c                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
- .libc.write      0x00038a         0x4a build/default/production/mcc_generated_files/uart1.o
-                  0x00038a                  _write
+ .libc.write      0x000390         0x4a build/default/production/mcc_generated_files/uart1.o
+                  0x000390                  _write
  .libpic30_crt_start_mode
-                  0x0003d4          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
-                  0x0003d4                  __crt_start_mode
-                  0x0003d4                  __crt_start_mode_normal
+                  0x0003da          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalda.Meo)
+                  0x0003da                  __crt_start_mode
+                  0x0003da                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -362,38 +362,38 @@ __FDEVOPT1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x2c36
+.debug_info       0x000000       0x2c1e
  *(.debug_info)
  .debug_info      0x000000        0x3b1 build/default/production/mcc_generated_files/clock.o
  .debug_info      0x0003b1        0x373 build/default/production/mcc_generated_files/system.o
  .debug_info      0x000724        0x44f build/default/production/mcc_generated_files/pin_manager.o
  .debug_info      0x000b73        0x46c build/default/production/mcc_generated_files/traps.o
- .debug_info      0x000fdf       0x119c build/default/production/mcc_generated_files/uart1.o
- .debug_info      0x00217b        0x729 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0028a4        0x392 build/default/production/main.o
+ .debug_info      0x000fdf       0x11be build/default/production/mcc_generated_files/uart1.o
+ .debug_info      0x00219d        0x729 build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0028c6        0x358 build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x6d8
+.debug_abbrev     0x000000        0x6cd
  *(.debug_abbrev)
  .debug_abbrev    0x000000         0x6a build/default/production/mcc_generated_files/clock.o
  .debug_abbrev    0x00006a         0xb4 build/default/production/mcc_generated_files/system.o
  .debug_abbrev    0x00011e         0x9b build/default/production/mcc_generated_files/pin_manager.o
  .debug_abbrev    0x0001b9        0x100 build/default/production/mcc_generated_files/traps.o
- .debug_abbrev    0x0002b9        0x247 build/default/production/mcc_generated_files/uart1.o
- .debug_abbrev    0x000500         0xb4 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_abbrev    0x0005b4          0x1 build/default/production/mcc_generated_files/mcc.o
- .debug_abbrev    0x0005b5        0x123 build/default/production/main.o
+ .debug_abbrev    0x0002b9        0x258 build/default/production/mcc_generated_files/uart1.o
+ .debug_abbrev    0x000511         0xb4 build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_abbrev    0x0005c5          0x1 build/default/production/mcc_generated_files/mcc.o
+ .debug_abbrev    0x0005c6        0x107 build/default/production/main.o
 
-.debug_line       0x000000        0x95e
+.debug_line       0x000000        0x96c
  *(.debug_line)
  .debug_line      0x000000        0x12a build/default/production/mcc_generated_files/clock.o
  .debug_line      0x00012a        0x11e build/default/production/mcc_generated_files/system.o
  .debug_line      0x000248        0x130 build/default/production/mcc_generated_files/pin_manager.o
  .debug_line      0x000378        0x14f build/default/production/mcc_generated_files/traps.o
- .debug_line      0x0004c7        0x227 build/default/production/mcc_generated_files/uart1.o
- .debug_line      0x0006ee        0x127 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_line      0x000815         0x1a build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x00082f        0x12f build/default/production/main.o
+ .debug_line      0x0004c7        0x228 build/default/production/mcc_generated_files/uart1.o
+ .debug_line      0x0006ef        0x127 build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x000816         0x1a build/default/production/mcc_generated_files/mcc.o
+ .debug_line      0x000830        0x13c build/default/production/main.o
 
 .debug_frame      0x000000        0x5d6
  *(.debug_frame)
@@ -405,7 +405,7 @@ __FDEVOPT1
  .debug_frame     0x00052c         0x2e build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_frame     0x00055a         0x7c build/default/production/main.o
 
-.debug_str        0x000000        0x12f
+.debug_str        0x000000        0x125
  *(.debug_str)
  .debug_str       0x000000         0x12 build/default/production/mcc_generated_files/clock.o
  .debug_str       0x000012          0xc build/default/production/mcc_generated_files/system.o
@@ -413,7 +413,7 @@ __FDEVOPT1
  .debug_str       0x000034         0x18 build/default/production/mcc_generated_files/traps.o
  .debug_str       0x00004c         0xb3 build/default/production/mcc_generated_files/uart1.o
  .debug_str       0x0000ff         0x1c build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_str       0x00011b         0x14 build/default/production/main.o
+ .debug_str       0x00011b          0xa build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -422,7 +422,7 @@ __FDEVOPT1
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x422
+                  0x000000        0x420
  *(.debug_pubnames)
  .debug_pubnames
                   0x000000         0x27 build/default/production/mcc_generated_files/clock.o
@@ -437,7 +437,7 @@ __FDEVOPT1
  .debug_pubnames
                   0x000387         0x2b build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_pubnames
-                  0x0003b2         0x70 build/default/production/main.o
+                  0x0003b2         0x6e build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -1842,25 +1842,25 @@ __c30_signature
  __c30_signature
                   0x0003aa          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
 
-.nbss               0x0800          0xe
+.nbss               0x0800         0x12
  .nbss              0x0800          0xe build/default/production/mcc_generated_files/uart1.o
                     0x080a                  _UART1_TxDefaultInterruptHandler
                     0x080c                  _UART1_RxDefaultInterruptHandler
+ .nbss              0x080e          0x4 build/default/production/main.o
+                    0x080e                  _command
 
-.ndata              0x080e          0x2
- .ndata             0x080e          0x2 build/default/production/mcc_generated_files/traps.o
+.ndata              0x0812          0x2
+ .ndata             0x0812          0x2 build/default/production/mcc_generated_files/traps.o
 
-.data               0x0810         0x2e
- .data              0x0810         0x2e build/default/production/main.o
-                    0x0810                  _RIGHT
-                    0x0818                  _LEFT
-                    0x0820                  _tx_buffer
+.data               0x0814         0x2e
+ .data              0x0814         0x2e build/default/production/main.o
+                    0x0814                  _RIGHT
+                    0x081c                  _LEFT
+                    0x0824                  _tx_buffer
 
-.bss                0x083e         0x34
- .bss               0x083e         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x085e         0x12 build/default/production/mcc_generated_files/uart1.o
- .bss               0x0870          0x2 build/default/production/main.o
-                    0x0870                  _rx_buffer
+.bss                0x0842         0x32
+ .bss               0x0842         0x20 build/default/production/mcc_generated_files/traps.o
+ .bss               0x0862         0x12 build/default/production/mcc_generated_files/uart1.o
 
 .config_ALTI2C1
                   0x00af2c          0x2
@@ -1927,52 +1927,52 @@ __c30_signature
  .ivt._U1ErrInterrupt
                   0x000096          0x2 build/default/production/mcc_generated_files/uart1.o
 
-.text             0x0003d6        0x49c
- .text            0x0003d6        0x35c build/default/production/mcc_generated_files/uart1.o
-                  0x0003d6                  _UART1_Initialize
-                  0x00040c                  _UART1_SetTxInterruptHandler
-                  0x000424                  _UART1_Transmit_CallBack
-                  0x00042a                  _UART1_SetRxInterruptHandler
-                  0x000442                  _UART1_Receive_CallBack
-                  0x000448                  _UART1_Read
-                  0x000474                  _UART1_Write
-                  0x00049e                  _UART1_IsRxReady
-                  0x0004b4                  _UART1_IsTxReady
-                  0x0004f0                  _UART1_IsTxDone
-                  0x00058e                  _UART1_ReadBuffer
-                  0x0005dc                  _UART1_WriteBuffer
-                  0x00062a                  _UART1_TransferStatusGet
-                  0x000676                  _UART1_Peek
-                  0x00069a                  _UART1_ReceiveBufferIsEmpty
-                  0x0006aa                  _UART1_TransmitBufferIsFull
-                  0x0006ba                  _UART1_StatusGet
-                  0x0006c2                  _UART1_TransmitBufferSizeGet
-                  0x0006f0                  _UART1_ReceiveBufferSizeGet
-                  0x00071e                  _UART1_Enable
-                  0x000728                  _UART1_Disable
- .text            0x000732         0xe2 build/default/production/main.o
-                  0x000732                  _main
-                  0x000780                  _turn
-                  0x0007f8                  _turn_left
-                  0x000806                  _turn_right
- .text            0x000814         0x5e build/default/production/mcc_generated_files/pin_manager.o
-                  0x000814                  _PIN_MANAGER_Initialize
+.text             0x0003dc        0x4ac
+ .text            0x0003dc        0x35c build/default/production/mcc_generated_files/uart1.o
+                  0x0003dc                  _UART1_Initialize
+                  0x000412                  _UART1_SetTxInterruptHandler
+                  0x00042a                  _UART1_Transmit_CallBack
+                  0x000430                  _UART1_SetRxInterruptHandler
+                  0x000448                  _UART1_Receive_CallBack
+                  0x00044e                  _UART1_Read
+                  0x00047a                  _UART1_Write
+                  0x0004a4                  _UART1_IsRxReady
+                  0x0004ba                  _UART1_IsTxReady
+                  0x0004f6                  _UART1_IsTxDone
+                  0x000594                  _UART1_ReadBuffer
+                  0x0005e2                  _UART1_WriteBuffer
+                  0x000630                  _UART1_TransferStatusGet
+                  0x00067c                  _UART1_Peek
+                  0x0006a0                  _UART1_ReceiveBufferIsEmpty
+                  0x0006b0                  _UART1_TransmitBufferIsFull
+                  0x0006c0                  _UART1_StatusGet
+                  0x0006c8                  _UART1_TransmitBufferSizeGet
+                  0x0006f6                  _UART1_ReceiveBufferSizeGet
+                  0x000724                  _UART1_Enable
+                  0x00072e                  _UART1_Disable
+ .text            0x000738         0xf2 build/default/production/main.o
+                  0x000738                  _main
+                  0x0007b2                  _turn
+                  0x00080a                  _turn_left
+                  0x00081a                  _turn_right
+ .text            0x00082a         0x5e build/default/production/mcc_generated_files/pin_manager.o
+                  0x00082a                  _PIN_MANAGER_Initialize
 
-.dinit            0x000872         0x48
- .dinit           0x000872         0x48 data_init
+.dinit            0x000888         0x48
+ .dinit           0x000888         0x48 data_init
 
-.text             0x0008ba         0x6a
- .text            0x0008ba         0x46 build/default/production/mcc_generated_files/clock.o
-                  0x0008ba                  _CLOCK_Initialize
- .text            0x000900         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000900                  _INTERRUPT_Initialize
+.text             0x0008d0         0x6a
+ .text            0x0008d0         0x46 build/default/production/mcc_generated_files/clock.o
+                  0x0008d0                  _CLOCK_Initialize
+ .text            0x000916         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000916                  _INTERRUPT_Initialize
 
-.init.delay32     0x000924         0x1c
- .init.delay32    0x000924         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
-                  0x000924                  ___delay32
+.init.delay32     0x00093a         0x1c
+ .init.delay32    0x00093a         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
+                  0x00093a                  ___delay32
 
-.text             0x000940         0x26
- .text            0x000940         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x000940                  _TRAPS_halt_on_error
- .text            0x000958          0xe build/default/production/mcc_generated_files/system.o
-                  0x000958                  _SYSTEM_Initialize
+.text             0x000956         0x26
+ .text            0x000956         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x000956                  _TRAPS_halt_on_error
+ .text            0x00096e          0xe build/default/production/mcc_generated_files/system.o
+                  0x00096e                  _SYSTEM_Initialize

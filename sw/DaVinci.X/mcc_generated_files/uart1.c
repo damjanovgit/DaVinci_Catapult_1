@@ -67,6 +67,8 @@ static uint8_t *txTail;
 static uint8_t * volatile txHead;
 static bool volatile rxOverflowed;
 
+extern uint8_t command;
+
 /** UART Driver Queue Length
 
   @Summary
@@ -205,6 +207,7 @@ void __attribute__ ( ( interrupt, no_auto_psv ) ) _U1RXInterrupt( void )
     while((U1STAbits.URXDA == 1))
     {
         *rxTail = U1RXREG;
+        command = *rxTail;
 
         // Will the increment not result in a wrap and not result in a pure collision?
         // This is most often condition so check first
