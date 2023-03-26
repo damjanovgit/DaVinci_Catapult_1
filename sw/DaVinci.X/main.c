@@ -47,6 +47,7 @@
  */
 #define FCY 4000000UL
 #include "mcc_generated_files/system.h"
+#include "mcc_generated_files/uart1.h"
 #include "xc.h"
 #include "coordinate.h"
 #include <libpic30.h>
@@ -61,16 +62,73 @@
 #define LASER1   4<<4 // laser 1 motor
 #define LASER2   5<<4 // laser 2 motor
 
+#define CATAPULT_YAW_RATIO   1
+#define CATAPULT_PITCH_RATIO 1
+
 // rotations of the motors
-uint8_t RIGHT[] = {1,2,4,8};
-uint8_t LEFT[] = {8,4,2,1};
+uint8_t RIGHT[] ={1,3,2,6,4,12,8,9};
+uint8_t LEFT[] ={9,8,12,4,6,2,3,1};
 // command received
 volatile uint8_t command = 0;
 
 // functions for turning motors
-void turn(int motor, char side[4]);
-void turn_left(int motor);
-void turn_right(int motor);
+static inline void turn(int motor, uint8_t side[8]) {
+    static int step = 0;
+    step = step % 8;
+    LATB = IDLE | side[step];
+    __delay_us(500);
+    LATB = motor | side[step];
+    __delay_us(500);
+    LATB = IDLE;
+    step++;
+}
+void turn_left(int motor) {
+    turn(motor, LEFT);
+}
+
+void turn_right(int motor) {
+    turn(motor, RIGHT);
+}
+
+static inline void turn_one_rotation(int motor, uint8_t side[8]) {
+    static int step = 0;
+    int count = 516*8;
+    while (count > 0) {
+        step = step % 8;
+        LATB = IDLE | side[step];
+        __delay_us(500);
+        LATB = motor | side[step];
+        __delay_us(500);
+        LATB = IDLE;
+        step++;
+        count--;
+    }
+
+}
+
+inline void turn_for_given_angle(int motor, float angle, float ratio) {
+    int steps = calculate_steps(angle, ratio);
+    int step = 0;
+    for (int i = 0; i < steps; i++) {
+        step = step % 8;
+        LATB = IDLE | LEFT[step];
+        __delay_us(500);
+        LATB = motor | LEFT[step];
+        __delay_us(500);
+        LATB = IDLE;
+        step++;
+    }
+}
+
+void update_angle(uint16_t steps,float ratio, float * angle)
+{
+    *angle = *angle + steps*0.001522*ratio;
+}
+int calculate_steps(float angle,float ratio)
+{
+    int steps = (int)(angle/(0.001522*ratio));
+    return steps;
+}
 
 uint8_t tx_buffer[30] = "Da-Vinci\n";
 
@@ -96,11 +154,13 @@ int main(void) {
             case 'a': // laser 1 left rotation
             {
                 turn_left(LASER1);
+                update_angle(1,1, &laser1_angle);
                 break;
             }
             case 'd': // laser 1 right rotation
             {
                 turn_right(LASER1);
+                update_angle(-1,1, &laser1_angle);
                 break;
             }
             case 's': // stop laser 1 rotation
@@ -110,78 +170,49 @@ int main(void) {
             case 'j': // laser 2 left rotation
             {
                 turn_left(LASER2);
+                update_angle(1,1, &laser2_angle);
                 break;
             }
             case 'l': // laser 2 right rotation
             {
                 turn_right(LASER2);
+                update_angle(-1,1, &laser2_angle);
                 break;
             }
             case 'k': // stop laser 2 rotation
             {
+                command = 0;
                 break;
             }
             case 'c': // calibrate
             {
+                /**
+                 * Needs to write function for calibration
+                 * @return 
+                 */
                 turn_one_rotation(LASER2, LEFT);
+                command = 0;
                 break;
             }
             case 'f': // fire
             {
+                /**
+                 * Needs to write function for firing
+                 * @return 
+                 */
+                turn_for_given_angle(LASER2,6.28,1);
+                command = 0;
                 break;
             }
             case 'p': // position catapult
             {
                 calculate_target_coords(laser1_coord,laser1_angle,laser2_coord,laser2_angle,&target_coord);
+                catapult_angle = calculate_target_position_angle(target_coord);
+                turn_for_given_angle(LASER2,catapult_angle,CATAPULT_YAW_RATIO);
+                command = 0;
                 break;
             }
         }
-        //command = 0;
-        // Add your application code
-
-        //turn_right(SIXTH);
-        //       UART1_WriteBuffer( buffer , 10 );
-        //turn_left(SIXTH);
     }
-
     return 1;
-}
-
-/**
- End of File
- */
-
-inline void turn(int motor, char side[4]) {
-    static int step = 0;
-    step = step % 4;
-    LATB = IDLE | side[step];
-    __delay_us(500);
-    LATB = motor | side[step];
-    __delay_us(500);
-    LATB = IDLE;
-    step++;
-}
-
-inline void turn_one_rotation(int motor, char side[4]) {
-    static int step = 0;
-    int count = 516*4;
-    while (count > 0) {
-        step = step % 4;
-        LATB = IDLE | side[step];
-        __delay_us(1000);
-        LATB = motor | side[step];
-        __delay_us(1000);
-        LATB = IDLE;
-        step++;
-        count--;
-    }
-
-}
-
-void turn_left(int motor) {
-    turn(motor, LEFT);
-}
-
-void turn_right(int motor) {
-    turn(motor, RIGHT);
 }
