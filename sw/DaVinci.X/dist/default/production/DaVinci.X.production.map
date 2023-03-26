@@ -96,13 +96,13 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x100               0x2dc           0x44a  (1098)
-.text                        0x3dc               0x4ac           0x702  (1794)
-.dinit                       0x888                0x48            0x6c  (108)
-.text                        0x8d0                0x6a            0x9f  (159)
-.init.delay32                0x93a                0x1c            0x2a  (42)
-.text                        0x956                0x26            0x39  (57)
+.text                        0x3dc               0x4f2           0x76b  (1899)
+.dinit                       0x8ce                0x42            0x63  (99)
+.text                        0x910                0x24            0x36  (54)
+.init.delay32                0x934                0x1c            0x2a  (42)
+.text                        0x950                0x26            0x39  (57)
 
-                 Total "program" memory used (bytes):          0xcba  (3258) 4%
+                 Total "program" memory used (bytes):          0xcb1  (3249) 4%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x4000]
@@ -111,10 +111,10 @@ section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
 .nbss                        0x800                   0            0x12  (18)
 .ndata                       0x812                   0             0x2  (2)
-.data                        0x814                   0            0x2e  (46)
-.bss                         0x842                   0            0x32  (50)
+.data                        0x814                   0            0x26  (38)
+.bss                         0x83a                   0            0x32  (50)
 
-                 Total "data" memory used (bytes):           0x74  (116) <1%
+                 Total "data" memory used (bytes):           0x6c  (108) <1%
 
 
 Dynamic Memory Usage
@@ -122,9 +122,9 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x874                              0x3f8c  (16268)
+stack                        0x86c                              0x3f94  (16276)
 
-                 Maximum dynamic memory (bytes):         0x3f8c  (16268)
+                 Maximum dynamic memory (bytes):         0x3f94  (16276)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
@@ -135,17 +135,17 @@ External Symbols in Data Memory (by address):
                     0x080c                  _UART1_RxDefaultInterruptHandler
                     0x080e                  _command
                     0x0814                  _RIGHT
-                    0x081c                  _LEFT
-                    0x0824                  _tx_buffer
+                    0x0818                  _LEFT
+                    0x081c                  _tx_buffer
 
 External Symbols in Data Memory (by name):
 
-                    0x081c                  _LEFT
+                    0x0818                  _LEFT
                     0x0814                  _RIGHT
                     0x080c                  _UART1_RxDefaultInterruptHandler
                     0x080a                  _UART1_TxDefaultInterruptHandler
                     0x080e                  _command
-                    0x0824                  _tx_buffer
+                    0x081c                  _tx_buffer
 
 External Symbols in Program Memory (by address):
 
@@ -187,18 +187,18 @@ External Symbols in Program Memory (by address):
                   0x00080a                  _turn_left
                   0x00081a                  _turn_right
                   0x00082a                  _PIN_MANAGER_Initialize
-                  0x0008d0                  _CLOCK_Initialize
-                  0x000916                  _INTERRUPT_Initialize
-                  0x00093a                  ___delay32
-                  0x00096e                  _SYSTEM_Initialize
+                  0x000888                  _CLOCK_Initialize
+                  0x000910                  _INTERRUPT_Initialize
+                  0x000934                  ___delay32
+                  0x000968                  _SYSTEM_Initialize
                   0x00af00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0008d0                  _CLOCK_Initialize
-                  0x000916                  _INTERRUPT_Initialize
+                  0x000888                  _CLOCK_Initialize
+                  0x000910                  _INTERRUPT_Initialize
                   0x00082a                  _PIN_MANAGER_Initialize
-                  0x00096e                  _SYSTEM_Initialize
+                  0x000968                  _SYSTEM_Initialize
                   0x00072e                  _UART1_Disable
                   0x000724                  _UART1_Enable
                   0x0003dc                  _UART1_Initialize
@@ -228,7 +228,7 @@ External Symbols in Program Memory (by name):
                   0x000376                  __U1ErrInterrupt
                   0x00030a                  __U1RXInterrupt
                   0x0002ae                  __U1TXInterrupt
-                  0x00093a                  ___delay32
+                  0x000934                  ___delay32
                   0x000152                  __data_init
                   0x000152                  __data_init_da
                   0x00013c                  __psv_init
@@ -1852,15 +1852,15 @@ __c30_signature
 .ndata              0x0812          0x2
  .ndata             0x0812          0x2 build/default/production/mcc_generated_files/traps.o
 
-.data               0x0814         0x2e
- .data              0x0814         0x2e build/default/production/main.o
+.data               0x0814         0x26
+ .data              0x0814         0x26 build/default/production/main.o
                     0x0814                  _RIGHT
-                    0x081c                  _LEFT
-                    0x0824                  _tx_buffer
+                    0x0818                  _LEFT
+                    0x081c                  _tx_buffer
 
-.bss                0x0842         0x32
- .bss               0x0842         0x20 build/default/production/mcc_generated_files/traps.o
- .bss               0x0862         0x12 build/default/production/mcc_generated_files/uart1.o
+.bss                0x083a         0x32
+ .bss               0x083a         0x20 build/default/production/mcc_generated_files/traps.o
+ .bss               0x085a         0x12 build/default/production/mcc_generated_files/uart1.o
 
 .config_ALTI2C1
                   0x00af2c          0x2
@@ -1927,7 +1927,7 @@ __c30_signature
  .ivt._U1ErrInterrupt
                   0x000096          0x2 build/default/production/mcc_generated_files/uart1.o
 
-.text             0x0003dc        0x4ac
+.text             0x0003dc        0x4f2
  .text            0x0003dc        0x35c build/default/production/mcc_generated_files/uart1.o
                   0x0003dc                  _UART1_Initialize
                   0x000412                  _UART1_SetTxInterruptHandler
@@ -1957,22 +1957,22 @@ __c30_signature
                   0x00081a                  _turn_right
  .text            0x00082a         0x5e build/default/production/mcc_generated_files/pin_manager.o
                   0x00082a                  _PIN_MANAGER_Initialize
+ .text            0x000888         0x46 build/default/production/mcc_generated_files/clock.o
+                  0x000888                  _CLOCK_Initialize
 
-.dinit            0x000888         0x48
- .dinit           0x000888         0x48 data_init
+.dinit            0x0008ce         0x42
+ .dinit           0x0008ce         0x42 data_init
 
-.text             0x0008d0         0x6a
- .text            0x0008d0         0x46 build/default/production/mcc_generated_files/clock.o
-                  0x0008d0                  _CLOCK_Initialize
- .text            0x000916         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x000916                  _INTERRUPT_Initialize
+.text             0x000910         0x24
+ .text            0x000910         0x24 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000910                  _INTERRUPT_Initialize
 
-.init.delay32     0x00093a         0x1c
- .init.delay32    0x00093a         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
-                  0x00093a                  ___delay32
+.init.delay32     0x000934         0x1c
+ .init.delay32    0x000934         0x1c c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(delay32da.Meo)
+                  0x000934                  ___delay32
 
-.text             0x000956         0x26
- .text            0x000956         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x000956                  _TRAPS_halt_on_error
- .text            0x00096e          0xe build/default/production/mcc_generated_files/system.o
-                  0x00096e                  _SYSTEM_Initialize
+.text             0x000950         0x26
+ .text            0x000950         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x000950                  _TRAPS_halt_on_error
+ .text            0x000968          0xe build/default/production/mcc_generated_files/system.o
+                  0x000968                  _SYSTEM_Initialize

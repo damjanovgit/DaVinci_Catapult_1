@@ -61,14 +61,13 @@
 #define LASER2   5<<4 // laser 2 motor
 
 // rotations of the motors
-uint8_t RIGHT[] = {1, 3, 2, 6, 4, 12, 8, 9};
-uint8_t LEFT[] = {9, 8, 12, 4, 6, 2, 3, 1};
-
+uint8_t RIGHT[] = {1,2,4,8};
+uint8_t LEFT[] = {8,4,2,1};
 // command received
 volatile uint8_t command = 0;
 
 // functions for turning motors
-void turn(int motor, char side[8]);
+void turn(int motor, char side[4]);
 void turn_left(int motor);
 void turn_right(int motor);
 
@@ -140,13 +139,13 @@ int main(void) {
  End of File
  */
 
-inline void turn(int motor, char side[8]) {
+inline void turn(int motor, char side[4]) {
     static int step = 0;
-    step = step % 8;
+    step = step % 4;
     LATB = IDLE | side[step];
-    __delay_us(500);
+    __delay_us(1000);
     LATB = motor | side[step];
-    __delay_us(500);
+    __delay_us(1000);
     LATB = IDLE;
     step++;
 }
