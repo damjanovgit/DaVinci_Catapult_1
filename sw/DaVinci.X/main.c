@@ -65,6 +65,9 @@
 #define CATAPULT_YAW_RATIO   1
 #define CATAPULT_PITCH_RATIO 1
 
+// Vo of flying object meters per second
+int speed = 3;
+
 // rotations of the motors
 uint8_t RIGHT[] ={1,3,2,6,4,12,8,9};
 uint8_t LEFT[] ={9,8,12,4,6,2,3,1};
@@ -90,23 +93,13 @@ void turn_right(int motor) {
     turn(motor, RIGHT);
 }
 
-static inline void turn_one_rotation(int motor, uint8_t side[8]) {
-    static int step = 0;
-    int count = 516*8;
-    while (count > 0) {
-        step = step % 8;
-        LATB = IDLE | side[step];
-        __delay_us(500);
-        LATB = motor | side[step];
-        __delay_us(500);
-        LATB = IDLE;
-        step++;
-        count--;
-    }
-
+int calculate_steps(float angle,float ratio)
+{
+    int steps = (int)(angle/(0.001522*ratio));
+    return steps;
 }
 
-inline void turn_for_given_angle(int motor, float angle, float ratio) {
+static inline void turn_for_given_angle(int motor, float angle, float ratio) {
     int steps = calculate_steps(angle, ratio);
     int step = 0;
     for (int i = 0; i < steps; i++) {
@@ -124,22 +117,18 @@ void update_angle(uint16_t steps,float ratio, float * angle)
 {
     *angle = *angle + steps*0.001522*ratio;
 }
-int calculate_steps(float angle,float ratio)
-{
-    int steps = (int)(angle/(0.001522*ratio));
-    return steps;
-}
 
-uint8_t tx_buffer[30] = "Da-Vinci\n";
+
+uint8_t tx_buffer[30] = "Da-Vinci is ready\n";
 
 COORD laser1_coord = {.x = 0.0, .y =  0.5 };
 COORD laser2_coord = {.x = 0.0, .y = -0.5 };
-
 COORD target_coord = {.x = 0.0, .y =  0.0 };
 
 float laser1_angle;
 float laser2_angle;
 float catapult_angle;
+float pitch_angle;
 
 /*
                          Main application
@@ -148,7 +137,7 @@ int main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
-    UART1_WriteBuffer(tx_buffer, 10);
+    UART1_WriteBuffer(tx_buffer, 20);
     while (1) {
         switch (command) {
             case 'a': // laser 1 left rotation
@@ -190,7 +179,6 @@ int main(void) {
                  * Needs to write function for calibration
                  * @return 
                  */
-                turn_one_rotation(LASER2, LEFT);
                 command = 0;
                 break;
             }
@@ -206,9 +194,28 @@ int main(void) {
             }
             case 'p': // position catapult
             {
+                /*
+                 * calculating target coordinates and writing it to target_coord
+                 */
                 calculate_target_coords(laser1_coord,laser1_angle,laser2_coord,laser2_angle,&target_coord);
+                /*
+                 * Calculating target position angle based on catapult coordinates (0,0)
+                 * This means for what angle catapult needs to rotate
+                 */
                 catapult_angle = calculate_target_position_angle(target_coord);
+                /*
+                 * This turns catapult for given angle written in catapult_angle
+                 * This function also takes gear ratio of yaw mechanism
+                 */
                 turn_for_given_angle(LASER2,catapult_angle,CATAPULT_YAW_RATIO);
+                /*
+                 * This function calculates angle of firing
+                 */
+                calculate_angle(target_coord,speed,&pitch_angle);
+                /*
+                 * This function positions firing angle called pitch_angle
+                 */
+                turn_for_given_angle(LASER2,pitch_angle,CATAPULT_PITCH_RATIO);
                 command = 0;
                 break;
             }
