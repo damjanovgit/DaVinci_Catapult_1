@@ -179,6 +179,10 @@ int main(void) {
                  * Needs to write function for calibration
                  * @return 
                  */
+                laser1_angle   = 0;
+                laser2_angle   = 0;
+                catapult_angle = 0;
+                pitch_angle    = 0;
                 command = 0;
                 break;
             }
@@ -194,6 +198,7 @@ int main(void) {
             }
             case 'p': // position catapult
             {
+                float catapult_angle_new;
                 /*
                  * calculating target coordinates and writing it to target_coord
                  */
@@ -202,7 +207,11 @@ int main(void) {
                  * Calculating target position angle based on catapult coordinates (0,0)
                  * This means for what angle catapult needs to rotate
                  */
-                catapult_angle = calculate_target_position_angle(target_coord);
+                catapult_angle_new = calculate_target_position_angle(target_coord);
+                if(catapult_angle_new == catapult_angle)
+                    break;
+                else
+                    catapult_angle = catapult_angle_new;
                 /*
                  * This turns catapult for given angle written in catapult_angle
                  * This function also takes gear ratio of yaw mechanism
