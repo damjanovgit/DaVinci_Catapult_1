@@ -57,13 +57,14 @@
 #define IDLE     7<<4
 #define YAW      0    // rotate catapult
 #define PITCH    1<<4 // up/down catapult
-#define THIRD    2<<4 // tighten catapult
-#define FOURTH   3<<4 // fire
+#define TIGHT    2<<4 // tighten catapult
+#define FIRE     3<<4 // fire
 #define LASER1   4<<4 // laser 1 motor
 #define LASER2   5<<4 // laser 2 motor
 
-#define CATAPULT_YAW_RATIO   1
+#define CATAPULT_YAW_RATIO   0.2f
 #define CATAPULT_PITCH_RATIO 1
+#define TIGHTENING_RATIO     0.033f // 1/30
 
 // Vo of flying object meters per second
 int speed = 3;
@@ -102,14 +103,31 @@ int calculate_steps(float angle,float ratio)
 static inline void turn_for_given_angle(int motor, float angle, float ratio) {
     int steps = calculate_steps(angle, ratio);
     int step = 0;
-    for (int i = 0; i < steps; i++) {
-        step = step % 8;
-        LATB = IDLE | LEFT[step];
-        __delay_us(500);
-        LATB = motor | LEFT[step];
-        __delay_us(500);
-        LATB = IDLE;
-        step++;
+    if(steps < 0)   // lower half of coordinate system
+    {
+        steps *= -1;
+        for (int i = 0; i < steps; i++) {
+            step = step % 8;
+            LATB = IDLE | RIGHT[step];
+            __delay_us(500);
+            LATB = motor | RIGHT[step];
+            __delay_us(500);
+            LATB = IDLE;
+            step++;
+        }
+    }
+    else    // upper half of coordinate system
+    {
+        for (int i = 0; i < steps; i++) {
+            step = step % 8;
+            LATB = IDLE | LEFT[step];
+            __delay_us(500);
+            LATB = motor | LEFT[step];
+            __delay_us(500);
+            LATB = IDLE;
+            step++;
+        }
+
     }
 }
 
@@ -121,8 +139,8 @@ void update_angle(uint16_t steps,float ratio, float * angle)
 
 uint8_t tx_buffer[30] = "Da-Vinci is ready\n";
 
-COORD laser1_coord = {.x = 0.0, .y =  0.5 };
-COORD laser2_coord = {.x = 0.0, .y = -0.5 };
+COORD laser1_coord = {.x = 0.0, .y =  0.2 };
+COORD laser2_coord = {.x = 0.0, .y = -0.2 };
 COORD target_coord = {.x = 0.0, .y =  0.0 };
 
 float laser1_angle;
@@ -192,7 +210,7 @@ int main(void) {
                  * Needs to write function for firing
                  * @return 
                  */
-                turn_for_given_angle(LASER2,6.28,1);
+                turn_for_given_angle(FIRE,3.1415,1);
                 command = 0;
                 break;
             }
@@ -208,15 +226,12 @@ int main(void) {
                  * This means for what angle catapult needs to rotate
                  */
                 catapult_angle_new = calculate_target_position_angle(target_coord);
-                if(catapult_angle_new == catapult_angle)
-                    break;
-                else
-                    catapult_angle = catapult_angle_new;
                 /*
                  * This turns catapult for given angle written in catapult_angle
                  * This function also takes gear ratio of yaw mechanism
                  */
-                turn_for_given_angle(LASER2,catapult_angle,CATAPULT_YAW_RATIO);
+                turn_for_given_angle(YAW,catapult_angle_new - catapult_angle,CATAPULT_YAW_RATIO);
+                catapult_angle = catapult_angle_new;    // after positioning update catapult angle
                 /*
                  * This function calculates angle of firing
                  */
@@ -224,7 +239,12 @@ int main(void) {
                 /*
                  * This function positions firing angle called pitch_angle
                  */
-                turn_for_given_angle(LASER2,pitch_angle,CATAPULT_PITCH_RATIO);
+                turn_for_given_angle(PITCH,pitch_angle,CATAPULT_PITCH_RATIO);
+                /**
+                 * This function tighten catapult for firing
+                 * 
+                 */
+                turn_for_given_angle(TIGHT,3.14/2,TIGHTENING_RATIO);
                 command = 0;
                 break;
             }

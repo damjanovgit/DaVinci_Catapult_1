@@ -28,5 +28,9 @@ void calculate_angle(COORD target_coord,float speed, float * catapult_angle)
 
 float calculate_target_position_angle(COORD target_coord)
 {
-    return target_coord.y/target_coord.x;
+    float atan_tmp = atan(target_coord.y/target_coord.x);
+    if(target_coord.x < 0){
+        atan_tmp += 3.1415;
+    }
+    return atan_tmp;
 }
