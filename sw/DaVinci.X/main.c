@@ -256,7 +256,7 @@ int main(void) {
                 /*
                  * This function positions firing angle called pitch_angle
                  */
-                turn_for_given_angle(PITCH,3.1415/3 -pitch_angle,CATAPULT_PITCH_RATIO);
+                turn_for_given_angle(PITCH,3.1415/3 - pitch_angle,CATAPULT_PITCH_RATIO);
                 /**
                  * This function tighten catapult for firing
                  * 
