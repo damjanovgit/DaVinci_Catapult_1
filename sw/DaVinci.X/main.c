@@ -51,6 +51,8 @@
 #include "xc.h"
 #include "coordinate.h"
 #include <libpic30.h>
+#include "mcc_generated_files/pin_manager.h"
+#include <stdio.h>
 
 
 
@@ -62,9 +64,9 @@
 #define LASER1   4<<4 // laser 1 motor
 #define LASER2   5<<4 // laser 2 motor
 
-#define CATAPULT_YAW_RATIO   0.2f
-#define CATAPULT_PITCH_RATIO 1
-#define TIGHTENING_RATIO     0.033f // 1/30
+#define CATAPULT_YAW_RATIO   0.11f
+#define CATAPULT_PITCH_RATIO 0.2f
+#define TIGHTENING_RATIO     0.3f // 1/30
 
 // Vo of flying object meters per second
 int speed = 3;
@@ -131,9 +133,17 @@ static inline void turn_for_given_angle(int motor, float angle, float ratio) {
     }
 }
 
-void update_angle(uint16_t steps,float ratio, float * angle)
+void update_angle(int16_t steps,float ratio, float * angle)
 {
     *angle = *angle + steps*0.001522*ratio;
+}
+
+static inline void calibrate_pitch()
+{
+    while(GP2_GetValue() == 1)
+    {
+        turn_right(PITCH);
+    }
 }
 
 
@@ -154,6 +164,7 @@ float pitch_angle;
 int main(void) {
     // initialize the device
     SYSTEM_Initialize();
+    GP2_SetDigitalInput();
 
     UART1_WriteBuffer(tx_buffer, 20);
     while (1) {
@@ -200,7 +211,8 @@ int main(void) {
                 laser1_angle   = 0;
                 laser2_angle   = 0;
                 catapult_angle = 0;
-                pitch_angle    = 0;
+                pitch_angle    = 3.1415/3;
+                calibrate_pitch();
                 command = 0;
                 break;
             }
@@ -221,11 +233,16 @@ int main(void) {
                  * calculating target coordinates and writing it to target_coord
                  */
                 calculate_target_coords(laser1_coord,laser1_angle,laser2_coord,laser2_angle,&target_coord);
+                printf("%f\n",target_coord.x);
+                printf("%f\n",target_coord.y);
+                printf("%f\n", laser1_angle);
+                printf("%f\n", laser2_angle);
                 /*
                  * Calculating target position angle based on catapult coordinates (0,0)
                  * This means for what angle catapult needs to rotate
                  */
                 catapult_angle_new = calculate_target_position_angle(target_coord);
+                printf("%f",catapult_angle_new);
                 /*
                  * This turns catapult for given angle written in catapult_angle
                  * This function also takes gear ratio of yaw mechanism
@@ -239,7 +256,7 @@ int main(void) {
                 /*
                  * This function positions firing angle called pitch_angle
                  */
-                turn_for_given_angle(PITCH,pitch_angle,CATAPULT_PITCH_RATIO);
+                turn_for_given_angle(PITCH,3.1415/3 -pitch_angle,CATAPULT_PITCH_RATIO);
                 /**
                  * This function tighten catapult for firing
                  * 
@@ -248,7 +265,42 @@ int main(void) {
                 command = 0;
                 break;
             }
+            case 'b':
+            {
+                turn_left(YAW);
+                break;
+            }
+            case 'm':
+            {
+                turn_right(YAW);
+                break;
+            }
+            case 'n':
+            {
+                command = 0;
+            }
+            case 'z':
+            {
+                turn_left(TIGHT);
+                break;
+            }
+            case 'u':
+            {
+                turn_right(TIGHT);
+                break;
+            }
+            case 'i':
+            {
+                turn_left(FIRE);
+                break;
+            }
+            case 'o':
+            {
+                turn_right(FIRE);
+                break;
+            }
         }
     }
     return 1;
 }
+

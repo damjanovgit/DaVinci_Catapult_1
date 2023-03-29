@@ -1785,7 +1785,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA4"/>
-         <value>output</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RB0"/>
@@ -2261,7 +2261,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRA4"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRB0"/>
@@ -3973,7 +3973,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISA"/>
-         <value>4</value>
+         <value>20</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="TRISB"/>
@@ -4881,7 +4881,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA4"/>
-         <value>output</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB0"/>
@@ -6226,12 +6226,12 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.HashMap">
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>1ccb8c36fc76c7b51fe1dd3aadc100e5f891e0112ac20ac8f97139d153e63318</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\mcc.h</file>
          <hash>2eb883c50949a320b30d903f02e94d580da22dd44bfdfc34df3ae24f84731141</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>1ccb8c36fc76c7b51fe1dd3aadc100e5f891e0112ac20ac8f97139d153e63318</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\uart1.h</file>
@@ -6255,7 +6255,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>c28fa2d53771baf014098661259cc6ea21f7e725eedb6cba6c96d3c42af209f6</hash>
+         <hash>45d17fbde7462a5589ac6525ffd848780b25b08d63d7301643b43cb9c835c749</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\system.h</file>
@@ -6263,27 +6263,27 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>9e88c71eb6c7cd3ad46780a7b22d6ac2135496256bc82e9eb5094d698c49a249</hash>
+         <hash>13b4a0948209d40dc58482007b74223a9ceba806cf518c6cf369ef2535b85996</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>
          <hash>09940ecba6f589920d5074d6ee41f1d41db56b74c493c265a324cad2ff7213d9</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\traps.h</file>
-         <hash>30b45e601c67090ba6f888ce8d51ee7d7a16ba265606011877aaeaacd85f8133</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\clock.h</file>
          <hash>6dcd1be3e6502842da6e2c199b993d7cac57102022a438b240edde1208b05459</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>037615aabf1981917f8b32b0bd5a89dde103ae465e28e9b70263a8c760b10683</hash>
+         <file>mcc_generated_files\traps.h</file>
+         <hash>30b45e601c67090ba6f888ce8d51ee7d7a16ba265606011877aaeaacd85f8133</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>1b8ff7852914a86c2a3fa94bbfc16b23b74e8b7dc48461f88d7f8ebd91e9d249</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.c</file>
+         <hash>037615aabf1981917f8b32b0bd5a89dde103ae465e28e9b70263a8c760b10683</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
