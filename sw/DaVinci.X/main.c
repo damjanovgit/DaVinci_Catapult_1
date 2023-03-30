@@ -69,7 +69,7 @@
 #define TIGHTENING_RATIO     0.3f // 1/30
 
 // Vo of flying object meters per second
-int speed = 3;
+int speed = 10;
 
 // rotations of the motors
 uint8_t RIGHT[] ={1,3,2,6,4,12,8,9};
@@ -129,8 +129,13 @@ static inline void turn_for_given_angle(int motor, float angle, float ratio) {
             LATB = IDLE;
             step++;
         }
-
+        
     }
+    LATB = IDLE;
+    __delay_us(500);
+    LATB = motor | 0;
+    __delay_us(500);
+    LATB = IDLE;
 }
 
 void update_angle(int16_t steps,float ratio, float * angle)
@@ -144,6 +149,29 @@ static inline void calibrate_pitch()
     {
         turn_right(PITCH);
     }
+    LATB = IDLE;
+    __delay_us(500);
+    LATB = PITCH | 0;
+    __delay_us(500);
+    LATB = IDLE;
+}
+
+static inline void calibrate_fire()
+{
+    while(GP3_GetValue() == 1)
+    {
+        turn_right(FIRE);
+    }
+    turn_for_given_angle(FIRE,2.3,1);
+    while(GP3_GetValue() == 1)
+    {
+        turn_right(FIRE);
+    }
+    LATB = IDLE;
+    __delay_us(500);
+    LATB = FIRE | 0;
+    __delay_us(500);
+    LATB = IDLE;
 }
 
 
@@ -183,6 +211,12 @@ int main(void) {
             }
             case 's': // stop laser 1 rotation
             {
+                LATB = IDLE;
+                __delay_us(500);
+                LATB = LASER1 | 0;
+                __delay_us(500);
+                LATB = IDLE;
+                command = 0;
                 break;
             }
             case 'j': // laser 2 left rotation
@@ -199,6 +233,11 @@ int main(void) {
             }
             case 'k': // stop laser 2 rotation
             {
+                LATB = IDLE;
+                __delay_us(500);
+                LATB = LASER2 | 0;
+                __delay_us(500);
+                LATB = IDLE;
                 command = 0;
                 break;
             }
@@ -213,6 +252,7 @@ int main(void) {
                 catapult_angle = 0;
                 pitch_angle    = 3.1415/3;
                 calibrate_pitch();
+                calibrate_fire();
                 command = 0;
                 break;
             }
@@ -222,7 +262,7 @@ int main(void) {
                  * Needs to write function for firing
                  * @return 
                  */
-                turn_for_given_angle(FIRE,3.1415,1);
+                turn_for_given_angle(FIRE,2.3,1);
                 command = 0;
                 break;
             }
@@ -277,7 +317,13 @@ int main(void) {
             }
             case 'n':
             {
+                LATB = IDLE;
+                __delay_us(500);
+                LATB = YAW | 0;
+                __delay_us(500);
+                LATB = IDLE;
                 command = 0;
+                break;
             }
             case 'z':
             {
