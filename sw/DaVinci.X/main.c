@@ -77,6 +77,45 @@ uint8_t LEFT[] ={9,8,12,4,6,2,3,1};
 // command received
 volatile uint8_t command = 0;
 
+#ifdef LUT
+double LUT_TIGHT[] ={0.6, 0.73, 0.87, 1.22, 1.57, 1.8};
+
+
+static double calculate_tight_angle(double distance){
+    if(distance < 0.6){
+        return LUT_TIGHT[0]; 
+    }
+    else if(distance >=0.6 && distance < 0.75){
+        return LUT_TIGHT[1];
+    }
+    else if(distance >=0.75 && distance < 1.0){
+        return LUT_TIGHT[2];
+    }
+    else if(distance >=1.0 && distance < 1.2){
+        return LUT_TIGHT[3];
+    }
+    else if(distance >=1.2 && distance < 1.5){
+        return LUT_TIGHT[4];
+    }
+    else if(distance >=1.5 && distance < 2){
+        return LUT_TIGHT[5];
+    }
+    else{
+        return LUT_TIGHT[6];
+    }
+}
+#else
+static double calculate_tight_angle(double distance){
+    double trsh= 2.0;
+    double result;
+    result = 0.75*distance +0.25;
+    if(result >trsh)
+        result = trsh;
+    else if(result <0.5)
+        result = 0.5;
+    return result;
+}
+#endif
 // functions for turning motors
 static inline void turn(int motor, uint8_t side[8]) {
     static int step = 0;
@@ -301,7 +340,8 @@ int main(void) {
                  * This function tighten catapult for firing
                  * 
                  */
-                turn_for_given_angle(TIGHT,3.14/2,TIGHTENING_RATIO);
+                double tight_angle = calculate_tight_angle(calculate_distance(target_coord));
+                turn_for_given_angle(TIGHT,tight_angle,TIGHTENING_RATIO);
                 command = 0;
                 break;
             }
